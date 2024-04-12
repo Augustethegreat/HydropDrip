@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --mywidth:100;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +31,44 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.carousel {
+  display: flex;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  width: 360px;
+  border-radius: 10px;
+  margin-top:  30px;
+
+  
+}
+
+.createimg{
+  width: 90px;
+  height: 50px;
+}
+/* @media (min-width: 724px) {
+  .carousel{
+    width: 350px;
+    height: auto;
+  }
+ 
+} */
+
+
+@media (min-width: 1024px) {
+  .carousel{
+    width: 300px;
+    height: auto;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .carousel{
+    width: 420px;
+  }
+
 }

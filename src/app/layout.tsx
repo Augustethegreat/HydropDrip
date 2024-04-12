@@ -1,7 +1,10 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Home from "./page";
+
+import Footers from "./components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,6 +21,8 @@ export default function RootLayout() {
         </div>
         
         <Home/></body>
+      
+        
     </html>
   );
 }
