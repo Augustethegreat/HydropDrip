@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import { useState,useEffect } from 'react';
 import Slideshow from './Carousel'
 import head1 from "./img/head1.jpg"
 import themobile from "./img/themobile.jpg"
@@ -13,76 +13,109 @@ import acc from "./img/acc.jpg"
 import deals from "./img/deals.jpg"
 import Footers from './footer'
 import Image from 'next/image'
+
+const heads = [head1,head2, head3];
 function TheBody() {
-  const slides = [pic1, pic2, pic3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heads.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div  className='w-full h-auto'>
-        <div className='  mt-7 px-5 lg:px-0 items-center mx-auto '>
-        <div className=' mx-auto items-center '>
-       
-        </div>
+    <div className=' flex  min-w-screen bg-[#fcfcfc]'>
+      <div className="flex justify-center mx-auto items-center">
+     <div className="max-w-screen-lg   lg:px-5 pb-[100px]">
+      <p className='text-[#a22a2b] px-3 text-xl md:text-2xl lg:text-4xl font-bold mt-4'>Bonjour,</p> 
+     <p className='text-black mt-2 px-3 text-sm lg:text-2xl font-bold'>Découvrez le compte Diaspora, votre compte bancaire maintenu de l’étranger …</p>
+
+     
+     {/* <div className=''>
+     {heads.map((image, index) => (
+        <img
+          key={index}
+          src={image.src}
+          alt={`Slide ${index + 1}`}
+          className={` absolute  transition-opacity duration-1000 w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl ${
+            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+          } ${index === currentImageIndex ? 'ease-in' : 'ease-out'}`}
+        />
+      ))}
+     </div> */}
+      <img src={head1.src} className=' w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl  '  alt=''  />
+
+             
+  <p className='text-[#a22a2b] px-3 text-xl lg:text-2xl mt-7 pb-7 text-center'>        
+               Restez au courant des dernières nouvelles et des produits Equity BCDC.
+            </p>
+          <div>
+            <Slideshow/>
+          </div>
+          <div className='block md:flex lg:flex  md:gap-x-2 items-center mx-auto  mt-10 pb-3 '>
+              <div className='border-[1px]  items-center mx-auto py-4 w-[360px] md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
+              <span className='flex gap-x-2 px-3'>
+              <img src={acc.src} className='w-[80px] md:w-[100px]  lg:w-[170px] h-auto px-1 md:px-0 '  alt=''  />
+              <div className=' text-black '>
+                <p className='font-bold text-sm'>Vous n'avez pas de compte ?</p>
+                <p className=' w-full  md:px-0 lg:px-0  md:w-[300px]  lg:w-[300px]   text-[11px] md:text-[12px] lg:text-[12px]'>Créez un compte pour ouvrir et gérer votre compte
+                    bancaire, facilement et en toute sécurité. Commandez
+                    votre carte, soumettez une demande de prêt et
+                    commandez nos produits numériques disponible sur
+                    notre portail.  </p>
+             
+              </div>
+              </span>
+              <div className='flex items-center mx-0 justify-center mt-0 '>
+              <button className='bg-[#a22a2b]  w-[190px] h-[40px] text-[12px] text-white'>CREER VOTRE COMPTE</button>
+                </div>
+              </div>
+              <div className='border-[1px] items-center mx-auto py-4 w-[360px] md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
+              <span className='flex gap-x-2 px-3'>
+              <img src={deals.src}  className='w-[80px] md:w-[100px]  lg:w-[170px] h-auto px-1 md:px-0 '   alt=''  />
+              <div className=' text-black '>
+                <p className='font-bold text-sm'>Abonnez-vous à nos newsletters !</p>
+                <p className=' w-full md:px-0 lg:px-0   md:w-[300px]  lg:w-[300px]   text-[11px] md:text-[12px] lg:text-[12px]'>Recevez des offres exclusives et des mises à jour sur
+                  nos produits DIASPORA. Soyez le premier informé de
+                  nos offres spéciales de produits bancaires et de nos
+                  concours.</p>
+             
+              </div>
+              </span>
+              <div className=' md:flex lg:flex  justify-center mt-2 mt:mt-0 lg:mt-0 pd-3 gap-x-1 md:gap-x-3'>         
+                  <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
+                  <input type="text" name="" id="" placeholder='  Votre Nom ' className='border-[1px] w-full px-4 md:w-[140px] text-black h-[40px] text-[10px]'/>
+                  </div>
+                  <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
+                  <input type="text" name="" id="" placeholder='  Votre adresse électronique' className='border-[1px] w-full px-4 md:w-[170px] text-black h-[40px] text-[10px]'/>
+                    </div>                
+                  <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
+                  <button className='bg-[#a22a2b] w-full  h-[40px] md:w-[90px] md:h-[40px] text-[12px] text-white'>Enregistre</button>
+      
+                  </div>
+              </div>
+              </div>
          
-        
-        
-          <div className="container mx-auto  px-0 lg:px-4 " >  
+              </div>
 
-             <Slideshow />
-            </div>
+              <img src={themobile.src} className=' w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl'  alt=''  />
+        <p className='text-[#a22a2b] px-3 text-xl md:text-2xl lg:text-2xl font-bold mt-10'>C’est quoi Equity BCDC Diaspora ?</p>
+        <p className='text-[#474747] mt-2 px-3 text-sm lg:text-lg font-500 '>Conçu pour vous fournir des services quotidiens comme si vous étiez à la maison. Ouvrez votre compte et gardez le contrôle
+          depuis n'importe où dans le monde grâce aux services bancaires en ligne tout en gagnant des intérêts et des bonus sur votre
+          argent.</p>
 
-            <div className='  mt-[9vh]   mx-auto lg:w-[1000px]'>
-              <div className=' md:flex md:gap-x-2  mx-0 items-center '>
-              <div className='border-[1px] py-4 w-[360px] md:w-[458px] items-center mx-auto bg-[#ffffff]'>
-              <span className='flex '>
-              <img src={acc.src} className='w-[150px] [h-50px] px-1 md:px-3 lg:px-5'  alt=''  />
-              <div className=' text-black '>
-                <p className='font-bold text-sm'>Don’t have an account?</p>
-                <p className=' w-150 md:w-[300px] text-[11px] md:text-[12px] lg:text-sm'>Create an account to manage your bookings easily and securely.
-                 View recent trips, save your wishlists, and share your searches with friends and family.  </p>
-             
-              </div>
-              </span>
-              <div className='flex items-center justify-center mt-7 '>
-              <button className='bg-[#a22a2b]  px-3 h-[40px] text-sm '>Create Account</button>
-                </div>
-              </div>
-              <div className='border-[1px] py-4 w-[360px] md:w-[458px] mt-3 md:mt-0 items-center mx-auto bg-[#ffffff]'>
-              <span className='flex '>
-              <img src={deals.src} className='w-[150px] [h-50px] px-1 md:px-3 lg:px-5'  alt=''  />
-              <div className=' text-black '>
-                <p className='font-bold text-sm'>Get exclusive deals & travel updates</p>
-                <p className=' w-150 md:w-[300px] text-[11px] md:text-[12px] lg:text-sm'>Be the first to know about our travel specials and competitions. Get the latest travel updates and travel inspiration straight to your inbox.
-                </p>
-             
-              </div>
-              </span>
-              <div className='flex items-center justify-center mt-7 gap-x-1 md:gap-x-3'>
-                <input type="text" name="" id="" placeholder='  Enter your name ' className='border-[1px] w-[110px] md:w-[150px] text-black h-[40px] text-[12px]'/>
-                <input type="text" name="" id="" placeholder='  Enter your email' className='border-[1px] w-[110px] md:w-[150px] text-black h-[40px] text-[12px]'/>
-              <button className='bg-[#a22a2b]  w-[90px] h-[40px] text-sm'>Create</button>
-                </div>
-              </div>
-              </div>
-              
-                <div className='w-[360px] md:w-auto lg:w-auto items-center mx-auto'>
-                <img src={themobile.src} className='items-center mx-auto  hidden md:block lg:block md:w-[800px] lg:w-[1100px] h-[100px] lg:h-[340px] mt-10 rounded-xl'  alt=''  />
-                <img src={pic6.src} className='items-center mx-auto block md:hidden lg:hidden  w-[360px] h-[480px] mt-10 rounded-xl'  alt=''  />
-                <p className='text-black mt-10 text-2xl font-bold'>
-                  A propos de Equity BCDC
-                  </p>
-                  <p className='text-black text-sm pb-4'>
-                  EquityBCDC est une filiale de Equity Group Holdings Plc (EGH), suite à l'acquisition de la majorité des parts dans la Banque Commerciale du Congo par EGH, auprès de la famille de George Forrest, en juillet 2020. Elle opère en RDC depuis 1909.
+          
+          
+
+  </div>
+
+    </div>
     
-                  Nous facilitons le quotidien de nos milliers de clients à travers la RDC et le monde, grâce aux solutions digitales pour particuliers et entreprises, un large réseau d’agences bancaires et d’agents bancaires (EquityBCDC Express) à travers tout le pays et une gamme complète de cartes bancaires pour toute catégorie de la clientèle.
-                  </p>
-               
-                </div>
-             </div>
-        
-         
+        {/* <Footers/> */}
          </div>
-         <Footers/>
-        </div>
      
   )
 }
