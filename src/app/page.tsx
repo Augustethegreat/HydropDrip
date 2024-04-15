@@ -227,7 +227,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <WalletIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#4c566e]">Comptes</p>
+                   <p className="text-[#272828] font-sans">Comptes</p>
                 </div>
                
                 </a>
@@ -236,7 +236,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <CreditCardIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#4c566e]"> Crédits</p>
+                   <p className="text-[#272828] font-sans"> Crédits</p>
                 </div>
                
                 </a>
@@ -245,7 +245,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <BanknotesIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#4c566e]">Dépôt a termes</p>
+                   <p className="text-[#272828] font-sans">Dépôt a termes</p>
                 </div>
                
                 </a>
@@ -254,7 +254,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <RectangleGroupIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#4c566e]"> Nos Paquets</p>
+                   <p className="text-[#272828] font-sans"> Nos Paquets</p>
                 </div>
                
                 </a>
@@ -309,7 +309,7 @@ export default function Home() {
               <div>
               <input type="text" placeholder="Password" className="text-[#1c1c1c] font-light border-[1px] px-3 py-2 w-full  md:w-[360px] lg:w-[360px]  rounded-[7px] mt-2"  />
               </div>
-              <button className='bg-[#a22a2b] mt-3 w-full  h-[40px] md:w-[190px] md:h-[40px]  rounded-3xl text-sm text-white font-extrabold'>Login</button>
+              <button className='bg-[#a22a2b] hover:bg-[#d73611] mt-3 w-full  h-[40px] md:w-[190px] md:h-[40px]  rounded-3xl text-sm text-white font-extrabold'>Login</button>
               <p className="text-black hover:text-[#a22a2b]  text-[16px] font-bold">Forgot your password?</p>
               </div>
             </div>
@@ -317,7 +317,7 @@ export default function Home() {
             <div className="mt-4 shadow-lg lg:w-[800px] border-gray-300 md:pl-[90px] md:pr-0 lg:pl-[90px] lg:pr-[50px] pb-5 pt-8 border-t-[2px] border-t-[#f6f6f6]">
               <p className="text-black text-2xl">New User ?</p>
             
-              <button className='bg-[#a22a2b] mt-3 w-full px-3  h-[40px] md:w-[290px] md:h-[40px]  rounded-3xl text-sm text-white font-extrabold'>Register</button>
+              <button className='bg-[#a22a2b]  hover:bg-[#d73611] mt-3 w-full px-3  h-[40px] md:w-[290px] md:h-[40px]  rounded-3xl text-sm text-white font-extrabold'>Register</button>
               <p className="text-black hover:text-[#a22a2b]  text-[11px] font-bold">Site Guide</p>
               
             </div>
