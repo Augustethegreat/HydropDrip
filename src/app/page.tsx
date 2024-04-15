@@ -8,6 +8,7 @@ import { SocialIcon } from 'react-social-icons'
 import { cn } from "./lib/utils";
 import TheBody from "./components/Body";
 import Header from "./components/Header";
+import Aide from "./components/Aide";
 
 
 export default function Home() {
@@ -15,6 +16,25 @@ export default function Home() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [changeIcon, setChangeIcon] = useState("none")
   const [changeIcon1, setChangeIcon1] = useState("block")
+
+  const [creditpage, setCreditpage]= useState('none');
+  const [helpage, setHelppage]= useState('none');
+  const [bodypage, setBodypage]= useState('');
+
+  function helproute() {
+    if(helpage =="none") {
+      setHelppage(" ")
+      setBodypage('none')
+    }
+  }
+  function bodyproute() {
+    if(bodypage =="none") {
+      setHelppage("none")
+      setBodypage(' ')
+    }
+  }
+
+
   function changes() {
       if(changeIcon =="none") {
         setChangeIcon("block")
@@ -109,7 +129,7 @@ export default function Home() {
           <Link href="/" className="-m-1.1 p-1">
             
             {/* <h3 className="h-9 w-auto pr-25 md:pr-80 lg:pr-0 font-bold text-black text-lg mt-2  md:top-0"> EQUITY-BCDC</h3> */}
-            <img
+            <img onClick={bodyproute}
               className="w-20 md:w-40 lg:w-40 h-auto"
               src="https://equitygroupholdings.com/cd/Content/assets/img/equity-bank-logo.png"
               alt=""
@@ -141,7 +161,7 @@ export default function Home() {
           />
           </a>
          <a className="hover:cursor-pointer">
-         <span className="flex justify-end">
+         <span className="flex justify-end" onClick={helproute}>
                   <QuestionMarkCircleIcon className="h-6 w-6 text-[#14a8d7] "
            aria-hidden="true"/>
                   <p className="text-[#14a8d7]  hidden lg:flex">Aide</p>
@@ -309,8 +329,11 @@ export default function Home() {
         </Dialog.Panel>
       </Dialog>
     </header>
-      <div style={{display:''}}>
+      <div style={{display:bodypage}}>
       <TheBody />
+      </div>
+      <div style={{display:helpage}}>
+        <Aide/>
       </div>
     
     </main>
