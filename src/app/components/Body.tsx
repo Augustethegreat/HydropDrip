@@ -72,7 +72,7 @@ function TheBody() {
               </div>
               </span>
               <div className='flex items-center mx-0 justify-center mt-0 '>
-              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-[190px] h-[40px] text-[12px] text-white'>CREER VOTRE COMPTE</button>
+              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-[190px] h-[40px] text-[12px] font-bold text-white'>CREER VOTRE COMPTE</button>
                 </div>
               </div>
               <div className='border-[1px] items-center mx-auto py-4 w-[360px] md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
@@ -95,7 +95,7 @@ function TheBody() {
                   <input type="text" name="" id="" placeholder='  Votre adresse électronique' className='border-[1px] w-full px-4 md:w-[170px] text-[#272828] h-[40px] text-[10px]'/>
                     </div>                
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-                  <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  h-[40px] md:w-[90px] md:h-[40px] text-[12px] text-white'>ENREGISTRE</button>
+                  <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  h-[40px] md:w-[90px] md:h-[40px] text-[12px] font-bold text-white'>ENREGISTRE</button>
       
                   </div>
               </div>
