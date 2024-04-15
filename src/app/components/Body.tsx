@@ -11,6 +11,7 @@ import pic6 from "./img/pic6.jpg"
 import pic3 from "./img/pic3.png"
 import acc from "./img/acc.jpg"
 import deals from "./img/deals.jpg"
+import appsell from "./img/theappsell.png"
 import Footers from './footer'
 import Image from 'next/image'
 
@@ -101,8 +102,12 @@ function TheBody() {
          
               </div>
 
-              <img src={themobile.src} className=' w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl'  alt=''  />
-        <p className='text-[#a22a2b] px-3 text-xl md:text-2xl lg:text-2xl font-bold mt-10'>C’est quoi Equity BCDC Diaspora ?</p>
+              {/* <img src={themobile.src} className=' w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl'  alt=''  /> */}
+              <img src={themobile.src} className=' hidden  md:hidden lg:flex lg:w-[1105px]  lg:h-auto mt-10 lg:rounded-2xl'  alt=''  />
+          
+          <img src={appsell.src} className=' w-full h-[400px] px-4 md:flex lg:hidden rounded-[30px] md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-10 lg:rounded-2xl'  alt=''  />
+        
+            <p className='text-[#a22a2b] px-3 text-xl md:text-2xl lg:text-2xl font-bold mt-10'>C’est quoi Equity BCDC Diaspora ?</p>
         <p className='text-[#474747] mt-2 px-3 text-sm lg:text-lg font-500 '>Conçu pour vous fournir des services quotidiens comme si vous étiez à la maison. Ouvrez votre compte et gardez le contrôle
           depuis n'importe où dans le monde grâce aux services bancaires en ligne tout en gagnant des intérêts et des bonus sur votre
           argent.</p>

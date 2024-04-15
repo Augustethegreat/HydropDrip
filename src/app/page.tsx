@@ -115,7 +115,22 @@ export default function Home() {
               alt=""
             />
           </Link>
-        </div>
+          </div>
+          <Popover.Group className="hidden  lg:flex lg:gap-x-12 ">
+          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b] ">
+          Comptes
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b]">
+            Crédits
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b]">
+            Dépôt a termes
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b]">
+            Nos Paquets
+          </a>
+          </Popover.Group>
+        
 
 
         <div className="flex  mx-auto pr-0  float-right lg:ml-0 justify-end lg:flex lg:flex-1 gap-x-3  lg:gap-x-6">
@@ -294,7 +309,9 @@ export default function Home() {
         </Dialog.Panel>
       </Dialog>
     </header>
-      <TheBody/>
+      <div style={{display:''}}>
+      <TheBody />
+      </div>
     
     </main>
   );
