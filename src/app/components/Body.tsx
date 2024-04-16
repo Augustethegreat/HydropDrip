@@ -32,24 +32,28 @@ function TheBody() {
     <div className=' flex  min-w-screen bg-[#fcfcfc]'>
       <div className="flex justify-center mx-auto items-center">
      <div className="max-w-screen-lg   lg:px-5 pb-[100px]">
-      <p className='text-[#a22a2b] px-3 font-semibold text-lg leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
-     <p className='text-[#272828]  mt-2 px-3 font-sans font-semibold text-lg leading-tight lg:text-[28px] '>Découvrez le compte Diaspora, votre compte bancaire maintenu de l’étranger …</p>
+      <p className='text-[#a22a2b] px-4 md:px-10 lg:px-0  font-semibold text-lg leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
+     <p className='text-[#272828]  mt-2 px-4 md:px-10 lg:px-0 font-sans font-semibold text-lg leading-tight lg:text-[28px] '>Découvrez le compte Diaspora, votre compte bancaire maintenu de l’étranger …</p>
 
      
-     {/* <div className='w-full z-1 relative md:w-[800px] lg:w-[1105px] flex'>
+     <div className='w-full z-1  hidden md:w-full  lg:w-[1105px] h-[200px] md:flex lg:flex'>
      {heads.map((image, index) => (
-        <img
+        
+          <img
           key={index}
           src={image.src}
           alt={`Slide ${index + 1}`}
-          className={` absolute  transition-opacity duration-1000 w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl ${
+          className={` absolute  transition-opacity duration-1000 w-full md:px-10 lg:px-0  md:w-full lg:w-[990px] md:h-auto lg:h-auto mt-10  lg:rounded-2xl ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           } ${index === currentImageIndex ? 'ease-in' : 'ease-out'}`}
         />
+       
       ))}
-     </div> */}
-      <img src={head1.src} className=' w-full hidden lg:flex md:flex md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl  '  alt=''  />
-      <img src={smallhead.src} className=' w-full px-2 rounded-[25px] md:hidden lg:hidden  mt-10   '  alt=''  />
+     </div>
+      {/* {/* <img src={head1.src} className=' w-full hidden lg:flex md:flex md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl  '  alt=''  /> */}
+      <div className='px-4'>
+      <img src={smallhead.src} className=' w-full  rounded-[25px] md:hidden lg:hidden  mt-10   '  alt=''  />
+      </div>
              
   <p className='text-[#a22a2b] px-3 text-xl lg:text-2xl mt-7 pb-7 text-center'>        
                Restez au courant des dernières nouvelles et des produits Equity BCDC.
@@ -57,8 +61,8 @@ function TheBody() {
           <div>
             <Slideshow/>
           </div>
-          <div className='block md:flex lg:flex  md:gap-x-2 items-center mx-auto  mt-10 pb-3 '>
-              <div className='border-[1px]  items-center mx-auto py-4 w-[360px] md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
+          <div className='block md:flex md:px-10 lg:flex px-4 md:w-auto lg:px-0 md:gap-x-2 items-center mx-auto  mt-10 pb-3 '>
+              <div className='border-[1px]  items-center mx-auto py-4 w-full px-0 md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
               <span className='flex gap-x-2 px-3'>
               <img src={acc.src} className='w-[80px] md:w-[100px]  lg:w-[170px] h-auto px-1 md:px-0 '  alt=''  />
               <div className=' text-[#272828] '>
@@ -71,11 +75,11 @@ function TheBody() {
              
               </div>
               </span>
-              <div className='flex items-center mx-0 justify-center mt-0 '>
-              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-[190px] h-[40px] text-[12px] font-bold text-white'>CREER VOTRE COMPTE</button>
+              <div className='flex items-center mx-auto justify-center mt-0 py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
+              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full md:w-[190px] lg:w-[190px] h-[40px] text-[12px] font-bold text-white '>CREER VOTRE COMPTE</button>
                 </div>
               </div>
-              <div className='border-[1px] items-center mx-auto py-4 w-[360px] md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
+              <div className='border-[1px] items-center mx-auto py-4 w-full px-0 md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
               <span className='flex gap-x-2 px-3'>
               <img src={deals.src}  className='w-[80px] md:w-[100px]  lg:w-[170px] h-auto px-1 md:px-0 '   alt=''  />
               <div className=' text-[#272828] '>
@@ -106,10 +110,12 @@ function TheBody() {
               {/* <img src={themobile.src} className=' w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl'  alt=''  /> */}
               <img src={themobile.src} className=' hidden  md:hidden lg:flex lg:w-[1105px]  lg:h-auto mt-10 lg:rounded-2xl'  alt=''  />
           
-          <img src={appsell.src} className=' w-full h-[400px] px-4 md:flex lg:hidden rounded-[30px] md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-10 lg:rounded-2xl'  alt=''  />
+          <div className='lg:w-auto md:w-auto w-full px-4'>
+          <img src={appsell.src} className=' w-full h-[400px] px-0 md:flex lg:hidden rounded-[30px] md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-10 lg:rounded-2xl'  alt=''  />
         
-            <p className='text-[#a22a2b] px-3 text-xl md:text-2xl lg:text-2xl font-semibold mt-10'>C’est quoi Equity BCDC Diaspora ?</p>
-        <p className='text-[#272828] font-sans mt-2 px-3 text-sm lg:text-lg font-500 '>Conçu pour vous fournir des services quotidiens comme si vous étiez à la maison. Ouvrez votre compte et gardez le contrôle
+          </div>
+            <p className='text-[#a22a2b] px-4 text-xl md:text-2xl lg:text-2xl font-semibold mt-10'>C’est quoi Equity BCDC Diaspora ?</p>
+        <p className='text-[#272828] font-sans mt-2 px-4 text-[11px] md:text-[12px] lg:text-[12px] font-500 '>Conçu pour vous fournir des services quotidiens comme si vous étiez à la maison. Ouvrez votre compte et gardez le contrôle
           depuis n'importe où dans le monde grâce aux services bancaires en ligne tout en gagnant des intérêts et des bonus sur votre
           argent.</p>
 

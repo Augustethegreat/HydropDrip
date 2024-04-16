@@ -41,7 +41,7 @@ const Slideshow = () => {
     return (
       <div className="overflow-hidden max-w-screen-lg">
        
-          <div className="flex mx-auto items-center  md:w-auto lg:w-auto gap-x-2 transition-transform duration-2000 ease-in-out w-full px-2 py-5 rounded-10 mt-30" 
+          <div className="flex mx-auto items-center  md:w-auto lg:w-auto lg:gap-x-2 md:gap-x-2 gap-x-4 transition-transform duration-2000 ease-in-out w-full px-4 lg:px-0 md:px-10 py-5 rounded-10 mt-30" 
           // style={{ transform: `translateX(-${currentIndex * 100}%)`,transitionDuration:'2000',
           // transitionTimingFunction:"ease-in-out" ,transitionProperty:'transform' }}  
           >
