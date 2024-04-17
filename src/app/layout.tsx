@@ -3,9 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Home from "./page";
+import { Roboto, Montserrat, Barlow } from "next/font/google";
 
 import Footers from "./components/footer";
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Barlow({
+  subsets: ["latin"],
+  weight: ["100", "500", "700","400","600"]
+});
 
 export const metadata = {
   title: "Equity-Bcdc",
@@ -15,7 +19,7 @@ export const metadata = {
 export default function RootLayout() {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
        
         
         <Home/></body>

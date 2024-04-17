@@ -58,13 +58,13 @@ const Slideshow = () => {
           className="absolute mt-[-45%] md:mt-[-130px]  bg-white bg-opacity-50 px-0 py-1 rounded-full"
           onClick={prevSlide}
         >
-          <ChevronLeftIcon className="h-6 w-11 " aria-hidden="true" />
+          <ChevronLeftIcon className="h-6 w-11 text-white " aria-hidden="true" />
         </button>
         <button
           className="absolute mt-[-45%] md:mt-[-130px] ml-[89%]  md:ml-[89%] lg:ml-[942px] bg-white bg-opacity-50 px-0 py-1 rounded-full"
           onClick={nextSlide}
         >
-          <ChevronRightIcon className="h-6 w-11 " aria-hidden="true" />
+          <ChevronRightIcon className="h-6 w-11 text-white " aria-hidden="true" />
         </button>
        </div>
       </div>

@@ -46,7 +46,7 @@ export default function Home() {
       }
   }
   return (
-    <main className={`min-h-screen filter   items-center justify-between bg-[#f9f8f8] ${loginOpen ? 'filter blur-sm =' : ''}`}>
+    <main className={`min-h-screen filter   items-center justify-between bg-white ${loginOpen ? 'filter blur-[1px] =' : ''}`}>
         <header  className="bg-[#ffffff] h-15 border-b-2     ">
         <nav className="mx-auto hidden md:hidden lg:flex w-full text-[#a22a2b] items-center justify-start p-1 lg:px-8 border-b-[1px] border-b-[#a22a2b]"
         aria-label="Global" >
@@ -54,16 +54,16 @@ export default function Home() {
              <div className="py-2 px-2 hover:bg-[#f3f3f3]">
              <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button onClick={changes} className="flex items-center gap-x-4 text-sm font-semibold leading-6 text-[#a22a2b] border-none hover:border-none">
+            <Popover.Button onClick={changes} className="flex items-center gap-x-4 text-[15px] font-bold   text-[#a22a2b] border-none hover:border-none">
               RDC
               <ChevronDownIcon
               style={{display:changeIcon1}}
-                className='h-5 w-5 cha flex-none text-[#a22a2b]'
+                className='h-7 w-7  flex-none text-[#a22a2b] text-[15px] font-bold'
                 aria-hidden="true"
               />
               <ChevronUpIcon
               style={{display:changeIcon}}
-                className="h-5 w-5 flex-none text-[#a22a2b]"
+                className="h-7 w-7 font-bold flex-none text-[#a22a2b]"
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -93,22 +93,22 @@ export default function Home() {
           </Popover>
           </Popover.Group>
              </div>
-             <div className="flex gap-x-4 py-2 px-2 hover:bg-[#f3f3f3]">
-             <a href="" className="font-semibold">FR</a>
+             <div className="flex gap-x-4 py-2  px-2 font-[15px] hover:bg-[#f3f3f3]">
+             <a href="" className="text-[15px] mt-[2px] font-bold">FR</a>
              <ChevronDownIcon
           
-                className='h-5 w-5 mt-[2px] flex-none text-[#a22a2b]'
+                className='h-7 w-7 mt-[0px] flex-none text-[#a22a2b]'
                 aria-hidden="true"
               />
              </div>
              <div className="flex py-1">
-             <SocialIcon url="https://www.facebook.com/EquityBCDC/" fgColor='#a22a2b' bgColor='transparent' style={{ height: 30, width: 30 }} />
-             <SocialIcon url="https://twitter.com/EquityBCDC" fgColor='#a22a2b' bgColor='transparent' style={{ height: 30, width: 30 }}  />
-             <SocialIcon url="https://www.linkedin.com/company/equitybcdc/" fgColor='#a22a2b' bgColor='transparent' style={{ height: 30, width: 30 }} />
-             <SocialIcon url="https://www.instagram.com/equitybankcongo/" fgColor='#a22a2b' bgColor='transparent' style={{ height: 30, width: 30 }} />
+             <SocialIcon url="https://www.facebook.com/EquityBCDC/" fgColor='#a22a2b' bgColor='transparent' style={{ height: 34, width: 34 }} />
+             <SocialIcon url="https://twitter.com/EquityBCDC" fgColor='#a22a2b' bgColor='transparent' style={{ height: 34, width: 34 }}  />
+             <SocialIcon url="https://www.linkedin.com/company/equitybcdc/" fgColor='#a22a2b' bgColor='transparent' style={{ height: 34, width: 34 }} />
+             <SocialIcon url="https://www.instagram.com/equitybankcongo/" fgColor='#a22a2b' bgColor='transparent' style={{ height: 34, width: 34 }} />
              </div>
-             <p className="text-black px-2 py-2">Appel</p>
-             <p className="py-2 font-semibold">+243-996-018-000</p>
+             <p className="text-black px-2 py-2 font-medium text-[15px]">Appel</p>
+             <p className="py-2 font-medium text-[15px]">+243-996-018-000</p>
             </div>
         </nav>
       <nav
@@ -137,16 +137,16 @@ export default function Home() {
           </Link>
           </div>
           <Popover.Group className="hidden  lg:flex lg:gap-x-12 ">
-          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b] ">
+          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ">
           Comptes
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b]">
+          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
             Crédits
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b]">
+          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
             Dépôt a termes
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-black border-b-[2px] border-b-white hover:border-b-[#a22a2b]">
+          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
             Nos Paquets
           </a>
           </Popover.Group>
@@ -156,23 +156,23 @@ export default function Home() {
         <div className="flex  mx-auto pr-0  float-right lg:ml-0 justify-end lg:flex lg:flex-1 gap-x-3  lg:gap-x-6">
           <a href="#">
           <EnvelopeIcon 
-           className="h-6 w-6 justify-end text-[#14a8d7] "
+           className="h-6 w-6 justify-end text-[#a22a2b] "
            aria-hidden="true"
           />
           </a>
          <a className="hover:cursor-pointer">
          <span className="flex justify-end" onClick={helproute}>
-                  <QuestionMarkCircleIcon className="h-6 w-6 text-[#14a8d7] "
+                  <QuestionMarkCircleIcon className="h-6 w-6 text-[#a22a2b] "
            aria-hidden="true"/>
-                  <p className="text-[#14a8d7]  hidden lg:flex">Aide</p>
+                  <p className="text-[#a22a2b] font-medium text-[15px] hidden lg:flex">Aide</p>
          </span>
          </a>
          <a href="#">
          <span className="flex gap-x-2 justify-end">
           <p className="text-[#646464] lg:flex ">| </p>
-          <UserCircleIcon className="h-6 w-6  text-[#14a8d7] "
+          <UserCircleIcon className="h-6 w-6  text-[#a22a2b] "
            aria-hidden="true" onClick={() => setLoginOpen(true)}/>
-           <p  className="text-[#14a8d7] hidden  lg:flex"  onClick={() => setLoginOpen(true)}>Mon compte</p>
+           <p  className="text-[#a22a2b] hidden font-medium text-[15px] lg:flex"  onClick={() => setLoginOpen(true)}>Mon compte</p>
          </span>
          </a>
         </div>
@@ -213,10 +213,10 @@ export default function Home() {
                 <UserCircleIcon className="h-10 w-10 text-[#14a8d7] mt-4 " aria-hidden="true"/>
                 </div>
               <div className="py-2 ">
-                <p className="text-black text-lg font-semibold">Bonjour !</p>
+                <p className="text-black font-medium text-[15px]">Bonjour !</p>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-0 text-base font-semibold leading-7 text-[#14a8d7] "
+                  className="-mx-3 block rounded-lg px-3 py-0 text-base font-medium text-[15px] leading-7 text-[#14a8d7] "
                 >
                   Login / SignUp
                 </a>
@@ -227,7 +227,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <WalletIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-sans">Comptes</p>
+                   <p className="text-[#272828] font-medium text-[15px]">Comptes</p>
                 </div>
                
                 </a>
@@ -235,8 +235,8 @@ export default function Home() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
-                   <CreditCardIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-sans"> Crédits</p>
+                   <CreditCardIcon className="h-7 w-7 text-[#616f8d] font-medium text-[15px] mt-0 hover:text-white" aria-hidden="true"/>
+                   <p className="text-[#272828] font-medium text-[15px]"> Crédits</p>
                 </div>
                
                 </a>
@@ -245,7 +245,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <BanknotesIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-sans">Dépôt a termes</p>
+                   <p className="text-[#272828] font-medium text-[15px]">Dépôt a termes</p>
                 </div>
                
                 </a>
@@ -254,7 +254,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <RectangleGroupIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-sans"> Nos Paquets</p>
+                   <p className="text-[#272828] font-medium text-[15px]"> Nos Paquets</p>
                 </div>
                
                 </a>

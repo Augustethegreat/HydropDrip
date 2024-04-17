@@ -29,11 +29,11 @@ function TheBody() {
   }, []);
 
   return (
-    <div className=' flex  min-w-screen bg-[#fcfcfc]'>
+    <div className=' flex  min-w-screen bg-[#ffffff]'>
       <div className="flex justify-center mx-auto items-center">
      <div className="max-w-screen-lg   lg:px-5 pb-[100px]">
-      <p className='text-[#a22a2b] px-4 md:px-10 lg:px-0  font-semibold text-lg leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
-     <p className='text-[#272828]  mt-2 px-4 md:px-10 lg:px-0 font-sans font-semibold text-lg leading-tight lg:text-[28px] '>Découvrez le compte Diaspora, votre compte bancaire maintenu de l’étranger …</p>
+      <p className='text-[#a22a2b] px-4 md:px-10 lg:px-0  font-medium text-[15px] leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
+     <p className='text-[#272828]  mt-2 px-4 md:px-10 lg:px-0 font-medium text-[15px]  leading-tight lg:text-[28px] '>Découvrez le compte Diaspora, votre compte bancaire maintenu de l’étranger …</p>
 
      
      <div className='w-full z-1  hidden md:w-full  lg:w-[1105px] h-[200px] md:flex lg:flex'>
@@ -55,7 +55,7 @@ function TheBody() {
       <img src={smallhead.src} className=' w-full  rounded-[25px] md:hidden lg:hidden  mt-10   '  alt=''  />
       </div>
              
-  <p className='text-[#a22a2b] px-3 text-xl lg:text-2xl mt-7 pb-7 text-center'>        
+  <p className='text-[#a22a2b] px-3 font-medium text-xl lg:text-[28px] mt-7 pb-3 text-center'>        
                Restez au courant des dernières nouvelles et des produits Equity BCDC.
             </p>
           <div>
@@ -66,7 +66,7 @@ function TheBody() {
               <span className='flex gap-x-2 px-3'>
               <img src={acc.src} className='w-[80px] md:w-[100px]  lg:w-[170px] h-auto px-1 md:px-0 '  alt=''  />
               <div className=' text-[#272828] '>
-                <p className='font-bold  text-sm'>Vous n'avez pas de compte ?</p>
+                <p className='font-semibold  text-sm'>Vous n'avez pas de compte ?</p>
                 <p className=' w-full  font-normal md:px-0 lg:px-0  md:w-[300px]  lg:w-[300px]   text-[11px] md:text-[12px] lg:text-[12px]'>Créez un compte pour ouvrir et gérer votre compte
                     bancaire, facilement et en toute sécurité. Commandez
                     votre carte, soumettez une demande de prêt et
@@ -76,14 +76,14 @@ function TheBody() {
               </div>
               </span>
               <div className='flex items-center mx-auto justify-center mt-0 py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full md:w-[190px] lg:w-[190px] h-[40px] text-[12px] font-bold text-white '>CREER VOTRE COMPTE</button>
+              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full md:w-[190px] lg:w-[190px] h-[40px] text-[11px] font-bold text-white '>CREER VOTRE COMPTE</button>
                 </div>
               </div>
               <div className='border-[1px] items-center mx-auto py-4 w-full px-0 md:w-[450px] lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
               <span className='flex gap-x-2 px-3'>
               <img src={deals.src}  className='w-[80px] md:w-[100px]  lg:w-[170px] h-auto px-1 md:px-0 '   alt=''  />
               <div className=' text-[#272828] '>
-                <p className='font-bold text-sm  '>Abonnez-vous à nos newsletters !</p>
+                <p className='font-semibold  text-sm  '>Abonnez-vous à nos newsletters !</p>
                 <p className=' w-full md:px-0 lg:px-0  font-normal px-1 md:w-[300px]  lg:w-[300px]   text-[11px] md:text-[12px] lg:text-[12px]'>Recevez des offres exclusives et des mises à jour sur
                   nos produits DIASPORA. Soyez le premier informé de
                   nos offres spéciales de produits bancaires et de nos
@@ -91,15 +91,15 @@ function TheBody() {
              
               </div>
               </span>
-              <div className=' md:flex lg:flex  justify-center mt-2 mt:mt-0 lg:mt-0 pd-3 gap-x-1 md:gap-x-3'>         
+              <div className=' md:flex lg:flex  justify-center mt-2 mt:mt-0 lg:mt-0 pd-3 gap-x-1 md:gap-x-1 lg:gap-x-3'>         
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-                  <input type="text" name="" id="" placeholder='  Votre Nom ' className='border-[1px] w-full px-4 md:w-[140px] text-[#272828] h-[40px] text-[10px]'/>
+                  <input type="text" name="" id="" placeholder='  Votre Nom ' className='border-[1px] w-full px-2 md:w-[155px] rounded-[4px] border-[#a22a2b] text-[#272828] h-[40px] text-[11px]'/>
                   </div>
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-                  <input type="text" name="" id="" placeholder='  Votre adresse électronique' className='border-[1px] w-full px-4 md:w-[170px] text-[#272828] h-[40px] text-[10px]'/>
+                  <input type="text" name="" id="" placeholder='  Votre adresse électronique' className='border-[1px] w-full px-2  md:w-[155px] rounded-[4px] border-[#a22a2b] text-[#272828] h-[40px] text-[11px]'/>
                     </div>                
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-                  <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  h-[40px] md:w-[90px] md:h-[40px] text-[12px] font-bold text-white'>ENREGISTRE</button>
+                  <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  h-[40px] md:w-[120px] md:h-[40px] text-[11px] font-bold text-white'>ENREGISTREZ-VOUS</button>
       
                   </div>
               </div>
@@ -114,8 +114,8 @@ function TheBody() {
           <img src={appsell.src} className=' w-full h-[400px] px-0 md:flex lg:hidden rounded-[30px] md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-10 lg:rounded-2xl'  alt=''  />
         
           </div>
-            <p className='text-[#a22a2b] px-4 text-xl md:text-2xl lg:text-2xl font-semibold mt-10'>C’est quoi Equity BCDC Diaspora ?</p>
-        <p className='text-[#272828] font-sans mt-2 px-4 text-[11px] md:text-[12px] lg:text-[12px] font-500 '>Conçu pour vous fournir des services quotidiens comme si vous étiez à la maison. Ouvrez votre compte et gardez le contrôle
+            <p className='text-[#a22a2b] px-4 text-xl md:text-2xl lg:text-2xl font-medium mt-10'>C’est quoi Equity BCDC Diaspora ?</p>
+        <p className='text-[#272828] mt-2 px-4 text-[11px] md:text-[12px] lg:text-[14px]  '>Conçu pour vous fournir des services quotidiens comme si vous étiez à la maison. Ouvrez votre compte et gardez le contrôle
           depuis n'importe où dans le monde grâce aux services bancaires en ligne tout en gagnant des intérêts et des bonus sur votre
           argent.</p>
 
