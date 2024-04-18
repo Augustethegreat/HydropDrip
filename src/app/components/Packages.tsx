@@ -1,8 +1,13 @@
 import React from 'react'
+import themobile1 from "./img/thishead.png"
+import themobile from "./img/themobile.jpg"
+import themobile2 from "./img/head3.jpg"
+import smallhead from "./img/smallhead.png"
+import appsell from "./img/theappsell.png"
 
 function Packages() {
   return (
-    <div className='pb-[150px] '>
+    <div className='pb-[100px] '>
         <div className='border-b-[1px] border-b-[#e2e5e9] lg:max-w-screen-lg mx-auto md:w-full lg:w-auto items-center'>
             <h1 className='text-[#a22a2b] font-bold text-center mt-10 mx-auto items-center pb-3 w-full lg:w-[700px] px-10 border-b-[3px] border-b-[#a22a2b]'> COMPTES BANCAIRES</h1>
         </div>
@@ -120,9 +125,16 @@ function Packages() {
                 </div>
             </div>
            </div>
-           
+         
          </div>
         </div>
+        <div className='lg:px-[145px] lg:w-full mt-10'>
+        <img src={themobile1.src} className=' hidden  md:hidden lg:flex  lg:w-full  lg:h-[350px] mt-4 lg:rounded-xl'  alt=''  />
+        </div>
+          <div className='px-4'>
+          <img src={appsell.src} className=' w-full h-[350px]  md:flex lg:hidden rounded-[20px]  md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-6 lg:rounded-2xl'  alt=''  />
+        
+          </div>
        </div>
     </div>
   )
