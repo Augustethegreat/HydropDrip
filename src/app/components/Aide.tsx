@@ -6,11 +6,12 @@ import smallhead from "./img/smallhead.png"
 import appsell from "./img/theappsell.png"
 import { Bars3Icon, XMarkIcon, EnvelopeIcon, QuestionMarkCircleIcon, UserCircleIcon, CreditCardIcon, BanknotesIcon, WalletIcon, RectangleGroupIcon } from "@heroicons/react/24/outline";
 import {ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/outline';
+import { CheckIcon } from '@heroicons/react/20/solid'
 
 function Aide() {
  
   return (
-    <div  className='scroll-smooth'>
+    <div  className='scroll-smooth pb-[20px]'>
         <div className='scroll-smooth flex border-b-[1px] border-[#dee3e9] w-full mx-auto items-center text-[] text-[17px] font-medium'>
             <div className='max-w-screen-lg flex mx-auto items-center  gap-x-5 scroll-smooth'>
             <a href="#sendus">
@@ -18,7 +19,7 @@ function Aide() {
                 <h1 className=''>Send us your query</h1>
             </div>
             </a>
-            <a href="">
+            <a href="#contact">
             <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
                 <h1 >Chat with us</h1>
             </div>
@@ -30,7 +31,7 @@ function Aide() {
            </a>
             </div>
         </div>
-        <div className='mx-auto items-center  lg:max-w-screen-lg font-body'>
+        <div className='pb-[20px] mx-auto items-center  lg:max-w-screen-lg font-body'>
         <p id="sendus"  className='text-black text-2xl font-medium text-center mt-2 '>Vous désirez de l’aide ?</p>
         <div className='justify-center items-center w-full '>
            <div className='mx-auto px-4 lg:px-[250px] '>
@@ -55,6 +56,20 @@ function Aide() {
             </div>
            </div>
          
+        </div>
+        <div id='contact' className='text-black items-center mx-auto w-full px-0 lg:px-[250px] mt-[40px] '>
+                    <div  className=' px-4 md:px-0 w-full space-y-3 font-medium'>
+                        <p className='text-[20px] '>Contactez-Nous :</p>
+                    <p className='w-auto lg:w-[532px]'>Connectez-vous avec l'un de nos agents pour obtenir de l'aide en appelant le + 243 81 180 8868 ou envoyez-nous un courriel sur       <span className='text-[#a22a2b] underline-[1px]'>diaspora@equitybcdc.com</span></p>
+                    <p>Nos horaires d'ouverture sont les suivants :</p>
+                    <div className='flex '>
+                    <CheckIcon className="h-6 w-11 text-[#a22a2b] " aria-hidden="true" />
+                        <p>Du lundi au vendredi : de 08h00 à 18h00</p></div>
+                    <div className='flex'>
+                    <CheckIcon className="h-6 w-11 text-[#a22a2b] " aria-hidden="true" />
+                        <p>Les samedis : de 8h00 à 13h00</p>
+                    </div>
+                    </div>
         </div>
         <p  className='text-black text-2xl font-medium text-center mt-[65px] '>Questions Couramment Posées</p>
         <div id='faq' className='md:flex lg:block w-full  pb-[70px] mt-[34px] md:w-full md:px-[200px] md:gap-x-5 lg:px-[60px] items-center mx-auto'>

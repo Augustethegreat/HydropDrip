@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Footers from "./components/footer";
 import { Fragment, useState } from "react";
 import { Bars3Icon, XMarkIcon, EnvelopeIcon, QuestionMarkCircleIcon, UserCircleIcon, CreditCardIcon, BanknotesIcon, WalletIcon, RectangleGroupIcon } from "@heroicons/react/24/outline";
 import {ChatBubbleLeftIcon,ChevronDownIcon,ChevronUpIcon ,HomeIcon,PaperAirplaneIcon,PhoneIcon,PlayCircleIcon} from "@heroicons/react/20/solid";
@@ -9,6 +10,7 @@ import { cn } from "./lib/utils";
 import TheBody from "./components/Body";
 import Header from "./components/Header";
 import Aide from "./components/Aide";
+import Packages from "./components/Packages";
 
 
 export default function Home() {
@@ -20,21 +22,31 @@ export default function Home() {
   const [creditpage, setCreditpage]= useState('none');
   const [helpage, setHelppage]= useState('none');
   const [bodypage, setBodypage]= useState('');
-
+  const[packpage, setPackpage] = useState('none');
+  const[packcolor, setPackcolor] = useState('black');
+  function packroute() {
+    setHelppage('none')
+    setBodypage('none')
+    setPackpage('')
+    setPackcolor('[#a22a2b]')
+    setMobileMenuOpen(false)
+  }
   function helproute() {
     if(helpage =="none") {
       setHelppage(" ")
       setBodypage('none')
+      setPackpage('none')
+      setPackcolor('black')
     }
   }
   function bodyproute() {
     if(bodypage =="none") {
       setHelppage("none")
       setBodypage(' ')
+      setPackpage('none')
+      setPackcolor('black')
     }
   }
-
-
   function changes() {
       if(changeIcon =="none") {
         setChangeIcon("block")
@@ -45,8 +57,9 @@ export default function Home() {
         setChangeIcon1("block")
       }
   }
+  
   return (
-    <main className={`min-h-screen filter   items-center justify-between bg-white ${loginOpen ? 'filter blur-[1px] =' : ''}`}>
+    <main className={`min-h-screen filter   items-center justify-between bg-white `}>
         <header  className="bg-[#ffffff] h-15 border-b-2     ">
         <nav className="mx-auto hidden md:hidden lg:flex w-full text-[#a22a2b] items-center justify-start p-1 lg:px-8 border-b-[1px] border-b-[#a22a2b]"
         aria-label="Global" >
@@ -146,8 +159,8 @@ export default function Home() {
           <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
             Dépôt a termes
           </a>
-          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
-            Nos Paquets
+          <a href="#offres" onClick={packroute} className={`font-medium text-[15px] leading-6 text-${packcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]`}>
+             Nos offres
           </a>
           </Popover.Group>
         
@@ -250,11 +263,11 @@ export default function Home() {
                
                 </a>
                 <a
-                  href="#"
+                 href="#offres"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
-                ><div className="flex gap-x-6 hover:text-white">
+                ><div className="flex gap-x-6 hover:text-white"  onClick={packroute}>
                    <RectangleGroupIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-medium text-[15px]"> Nos Paquets</p>
+                   <p className="text-[#272828] font-medium text-[15px]"> Nos offres</p>
                 </div>
                
                 </a>
@@ -316,8 +329,11 @@ export default function Home() {
          
             <div className="mt-4 shadow-lg lg:w-[800px] border-gray-300 md:pl-[90px] md:pr-0 lg:pl-[90px] lg:pr-[50px] pb-5 pt-8 border-t-[2px] border-t-[#f6f6f6]">
               <p className="text-black text-2xl">New User ?</p>
-            
+
+              <a href="https://www.equitybcdc-diasporabanking.com/equity-bank-ui/register">
               <button className='bg-[#a22a2b]  hover:bg-[#d73611] mt-3 w-full px-3  h-[40px] md:w-[290px] md:h-[40px]  rounded-3xl text-sm text-white font-extrabold'>Register</button>
+              
+              </a>
               <p className="text-black hover:text-[#a22a2b]  text-[11px] font-bold">Site Guide</p>
               
             </div>
@@ -334,6 +350,12 @@ export default function Home() {
       </div>
       <div style={{display:helpage}}>
         <Aide/>
+      </div>
+      <div style={{display:packpage}}>
+        <Packages/>
+      </div>
+      <div>
+        <Footers/>
       </div>
     
     </main>
