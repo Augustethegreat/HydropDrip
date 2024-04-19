@@ -17,8 +17,8 @@ function Packages() {
          <div className='block lg:flex  lg:gap-x-4 space-y-5 lg:space-y-0'>
          <div className='border-[#ebebeb] border-[1px] w-full md:w-[400px] rounded-[20px] shadow-xl shadow-[#bcbcbc] '>
            <div className='text-black p-7'>
-                <p className='font-semibold text-[22px]'>Courant</p>
-                <p className='lg:w-[325px] font-[14px] pt-2'>Transferts de fonds (entrants et sortants) Mise à disposition, Opérations de change...</p>
+                <p className='font-semibold text-[22px] text-[#636569]'>Courant</p>
+                <p className='lg:w-[325px] text-[14px] pt-2'>Transferts de fonds (entrants et sortants) Mise à disposition, Opérations de change...</p>
 
             </div>
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
@@ -33,8 +33,8 @@ function Packages() {
            </div>
            <div className='border-[#ebebeb] border-[1px] w-full md:w-[400px] rounded-[20px] shadow-xl shadow-[#bcbcbc] '>
            <div className='text-black p-7'>
-                <p className='font-semibold text-[22px]'>Epargne</p>
-                <p className='lg:w-[325px] font-[14px] pt-2'>Compte permettant la constitution d'une épargne rémunérée sans obligation de durée...</p>
+                <p className='font-semibold text-[22px] text-[#636569]'>Epargne</p>
+                <p className='lg:w-[325px] text-[14px] pt-2'>Compte permettant la constitution d'une épargne rémunérée sans obligation de durée...</p>
 
             </div>
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
@@ -49,8 +49,8 @@ function Packages() {
            </div>
            <div className='border-[#ebebeb] border-[1px] w-full md:w-[400px] rounded-[20px] shadow-xl shadow-[#bcbcbc] '>
            <div className='text-black p-7'>
-                <p className='font-semibold text-[22px]'> Epargne +</p>
-                <p className='lg:w-[325px] font-[14px] pt-2'>Compte permettant la constitution d'une épargne rémunérée sans obligation de durée...</p>
+                <p className='font-semibold text-[22px] text-[#636569]'> Epargne +</p>
+                <p className='lg:w-[325px] text-[14px] pt-2'>Compte permettant la constitution d'une épargne rémunérée sans obligation de durée...</p>
 
             </div>
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
@@ -67,8 +67,8 @@ function Packages() {
          <div className='block lg:flex lg:gap-x-4 space-y-5 mt-5 md:mt-0 lg:mt-5 lg:space-y-0'>
          <div className='border-[#ebebeb] border-[1px] w-full md:w-[400px] rounded-[20px] shadow-xl shadow-[#bcbcbc] '>
            <div className='text-black p-7'>
-                <p className='font-semibold text-[22px]'>Junior</p>
-                <p className='lg:w-[325px] font-[14px] pt-2'>A la majorité, il se transforme automatiquement en compte épargne pour...</p>
+                <p className='font-semibold text-[22px] text-[#636569]'>Junior</p>
+                <p className='lg:w-[325px] text-[14px] pt-2'>A la majorité, il se transforme automatiquement en compte épargne pour...</p>
 
             </div>
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
@@ -83,8 +83,8 @@ function Packages() {
            </div>
            <div className='border-[#ebebeb] border-[1px] w-full md:w-[400px] rounded-[20px] shadow-xl shadow-[#bcbcbc] '>
            <div className='text-black p-7'>
-                <p className='font-semibold text-[22px]'>Junior Flexi</p>
-                <p className='lg:w-[325px] font-[14px] pt-2'>Alimentation via caisse et virement du parent / tuteur 1 retrait gratuit / mois...</p>
+                <p className='font-semibold text-[22px] text-[#636569]'>Junior Flexi</p>
+                <p className='lg:w-[325px] text-[14px] pt-2'>Alimentation via caisse et virement du parent / tuteur 1 retrait gratuit / mois...</p>
 
             </div>
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
@@ -99,8 +99,8 @@ function Packages() {
            </div>
            <div className='border-[#ebebeb] border-[1px] w-full md:w-[400px] rounded-[20px] shadow-xl shadow-[#bcbcbc] '>
            <div className='text-black p-7'>
-                <p className='font-semibold text-[22px]'>MASTA</p>
-                <p className='lg:w-[325px] font-[14px] pt-2'>Transferts de fonds (entrants et sortants)Mise à disposition...</p>
+                <p className='font-semibold text-[22px] text-[#636569]'>MASTA</p>
+                <p className='lg:w-[325px] text-[14px] pt-2'>Transferts de fonds (entrants et sortants)Mise à disposition...</p>
 
             </div>
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
@@ -118,8 +118,8 @@ function Packages() {
          <div className='block lg:flex px-4 lg:gap-x-4 md:px-0 mt-5'>
          <div className='border-[#ebebeb] border-[1px] w-full md:w-[400px] rounded-[20px] shadow-xl shadow-[#bcbcbc] '>
            <div className='text-black p-7'>
-                <p className='font-semibold text-[22px]'>DAT</p>
-                <p className='lg:w-[325px] font-[14px] pt-2'>Constitution d'une épargne bloquée pendant la période convenue et au taux annuel fixe....</p>
+                <p className='font-semibold text-[22px] text-[#636569]'>DAT</p>
+                <p className='lg:w-[325px] text-[14px] pt-2'>Constitution d'une épargne bloquée pendant la période convenue et au taux annuel fixe....</p>
 
             </div>
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
