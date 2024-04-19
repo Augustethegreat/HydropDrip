@@ -59,9 +59,9 @@ export default function Home() {
   }
   
   return (
-    <main className={`min-h-screen filter   items-center justify-between bg-white `}>
+    <main className={`min-h-screen filter   items-center justify-between bg-[#fefefe] `}>
         <header  className="bg-[#ffffff] h-15 border-b-2     ">
-        <nav className="mx-auto hidden md:hidden lg:flex w-full text-[#a22a2b] items-center justify-start p-1 lg:px-8 border-b-[1px] border-b-[#a22a2b]"
+        <nav className="mx-auto hidden md:hidden lg:flex w-full text-[#f5f4f4] items-center justify-start p-1 lg:px-8 border-b-[1px] border-b-[#a22a2b]"
         aria-label="Global" >
             <div className="flex  gap-x-2  float-right ml-[50%] text-sm">
              <div className="py-2 px-2 hover:bg-[#f3f3f3]">
@@ -107,7 +107,7 @@ export default function Home() {
           </Popover.Group>
              </div>
              <div className="flex gap-x-4 py-2  px-2 font-[15px] hover:bg-[#f3f3f3]">
-             <a href="" className="text-[15px] mt-[2px] font-bold">FR</a>
+             <a href="" className="text-[15px] mt-[2px] font-bold text-[#a22a2b]">FR</a>
              <ChevronDownIcon
           
                 className='h-7 w-7 mt-[0px] flex-none text-[#a22a2b]'
@@ -121,7 +121,7 @@ export default function Home() {
              <SocialIcon url="https://www.instagram.com/equitybankcongo/" fgColor='#a22a2b' bgColor='transparent' style={{ height: 34, width: 34 }} />
              </div>
              <p className="text-black px-2 py-2 font-medium text-[15px]">Appel</p>
-             <p className="py-2 font-medium text-[15px]">+243-996-018-000</p>
+             <p className="py-2 font-medium text-[15px] text-[#a22a2b]">+243-996-018-000</p>
             </div>
         </nav>
       <nav
