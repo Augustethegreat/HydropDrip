@@ -5,8 +5,8 @@ import img1 from "./img/acc3.jpg"
 function Credit() {
   return (
     <div className='pb-8'>
-        <div className='w-full bg-[#a22a2b] '>
-                <p className='text-center text-white py-10 font-semibold text-lg'>
+        <div className='w-full  '>
+                <p className='text-center text-black border-b-[1px] border-b-[#e2e2e2] py-10 font-semibold text-lg'>
                     SIMULATEUR DE REMBOURSEMENT</p>
             </div>
         <div className='flex mt-9 text-black text-lg  lg:max-w-screen-lg mx-auto items-center'>
