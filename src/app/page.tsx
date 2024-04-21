@@ -253,11 +253,11 @@ export default function Home() {
               </div>
                 </div>
                 <a
-                  href="#"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div className="flex gap-x-6 hover:text-white">
                    <WalletIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-medium text-[15px]">Comptes</p>
+                   <p className="text-[#272828] font-medium text-[15px]">Accueil</p>
                 </div>
                
                 </a>
