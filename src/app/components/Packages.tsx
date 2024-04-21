@@ -1,9 +1,9 @@
 import React from 'react'
-import themobile1 from "./img/thishead.png"
+import themobile1 from "./img/cap6.png"
 import themobile from "./img/themobile.jpg"
 import themobile2 from "./img/head3.jpg"
 import smallhead from "./img/smallhead.png"
-import appsell from "./img/theappsell.png"
+import appsell from "./img/offre2.jpg"
 
 function Packages() {
   return (
@@ -136,10 +136,10 @@ function Packages() {
          </div>
         </div>
         <div className='lg:px-[145px] lg:w-full mt-10'>
-        <img src={themobile1.src} className=' hidden  md:hidden lg:flex  lg:w-full  lg:h-[350px] mt-4 lg:rounded-xl'  alt=''  />
+        <img src={themobile1.src} className=' hidden  md:hidden lg:flex  lg:w-full  lg:h-auto mt-4 lg:rounded-xl'  alt=''  />
         </div>
           <div className='px-4'>
-          <img src={appsell.src} className=' w-full h-[350px]  md:flex lg:hidden rounded-[20px]  md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-6 lg:rounded-2xl'  alt=''  />
+          <img src={appsell.src} className=' w-full h-[350px]  md:flex lg:hidden shadow-xl rounded-[20px]  md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-6 lg:rounded-2xl'  alt=''  />
         
           </div>
        </div>

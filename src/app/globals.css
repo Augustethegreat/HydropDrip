@@ -39,27 +39,26 @@ body {
 .carousel {
   display: flex;
   transition-property: transform;
-  transition-duration: 3s;
+  transition-duration: 1s;
   transition-timing-function: ease-in-out;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
   border-radius: 10px;
-  margin-top:  30px;
-  width: 360px;
- padding-right: 2px;
- padding-left: 2px;
+
+
  padding-top: 2px;
  padding-bottom: 2px;
  align-items: center;
- column-gap: 0.5rem;
+ 
   
 }
 
 
 @media (min-width: 270px) {
   .carousel{
-    width: 350px;
-    height: auto;
+    width: 100%;
+    height: 250px;
+
   }
  
 }
@@ -67,8 +66,9 @@ body {
 
 @media (min-width: 1024px) {
   .carousel{
-    width: 322px;
+    width: 330px;
     height: auto;
+ 
   }
 
 }

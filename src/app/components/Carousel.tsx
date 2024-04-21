@@ -25,7 +25,7 @@ const Slideshow = () => {
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex === images.length - 140 ? 0 : prevIndex + 1));
-      }, 6000); // Change slide every 5 seconds
+      }, 8000); // Change slide every 5 seconds
   
       return () => clearInterval(interval);
     }, [images.length]);
@@ -41,28 +41,30 @@ const Slideshow = () => {
     return (
       <div className="overflow-hidden ">
        
-          <div className="flex mx-auto items-center  md:w-auto lg:w-auto lg:gap-x-2 md:gap-x-2 gap-x-4 transition-transform duration-2000 ease-in-out w-full px-4 lg:px-0 md:px-10 py-5 rounded-10 mt-30" 
-          // style={{ transform: `translateX(-${currentIndex * 100}%)`,transitionDuration:'2000',
-          // transitionTimingFunction:"ease-in-out" ,transitionProperty:'transform' }}  
+          <div className='w-full '>
+          <div className="carousel" 
+          style={{ transform: `translateX(-${currentIndex * 100}%)`,transitionDuration:'1000',
+          transitionTimingFunction:"ease-in-out" ,transitionProperty:'transform' }}  
           >
-          <img src={pic2.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[240px] shadow-lg rounded-xl' />
-          <img src={pic1.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[240px] shadow-lg rounded-xl' />
-          <img src={pic4.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[240px] shadow-lg rounded-xl' />
-          <img src={pic3.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[240px] shadow-lg rounded-xl' />
-          {/* {images.map((image, index) => (
-            <img key={index} src={image.src} alt={`Slide ${index}`} className="h-auto w-[460px] md:w-[400px] lg:w-[600px] px-2 rounded-xl" />
-          ))} */}
+          {/* <img src={pic2.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[330px] shadow-lg rounded-xl' />
+          <img src={pic1.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[330px] shadow-lg rounded-xl' />
+          <img src={pic4.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[330px] shadow-lg rounded-xl' /> */}
+
+          {images.map((image, index) => (
+            <img key={index} src={image.src} alt={`Slide ${index}`} className="h-auto w-full shadow-xl md:w-[400px] lg:w-[650px]  lg:px-2 rounded-xl" />
+          ))}
           
         </div>
+          </div>
        <div className='max-w-screen-lg flex '>
        <button
-          className="absolute mt-[-45%] md:mt-[-130px]  bg-white bg-opacity-50 px-0 py-1 rounded-full"
+          className="absolute mt-[-45%] md:mt-[-130px]  bg-black bg-opacity-50 px-0 py-1 rounded-full"
           onClick={prevSlide}
         >
           <ChevronLeftIcon className="h-6 w-11 text-white " aria-hidden="true" />
         </button>
         <button
-          className="absolute mt-[-45%] md:mt-[-130px] ml-[89%]  md:ml-[89%] lg:ml-[942px] bg-white bg-opacity-50 px-0 py-1 rounded-full"
+          className="absolute mt-[-45%] md:mt-[-130px] ml-[89%]  md:ml-[89%] lg:ml-[942px] bg-black bg-opacity-50 px-0 py-1 rounded-full"
           onClick={nextSlide}
         >
           <ChevronRightIcon className="h-6 w-11 text-white " aria-hidden="true" />

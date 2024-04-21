@@ -11,6 +11,7 @@ import TheBody from "./components/Body";
 import Header from "./components/Header";
 import Aide from "./components/Aide";
 import Packages from "./components/Packages";
+import Credit from "./components/Credit";
 
 
 export default function Home() {
@@ -24,24 +25,40 @@ export default function Home() {
   const [bodypage, setBodypage]= useState('');
   const[packpage, setPackpage] = useState('none');
   const[packcolor, setPackcolor] = useState('black');
+  const [creditcolor, setCreditcolor] = useState('black');
+
   function packroute() {
+    setCreditpage('none')
     setHelppage('none')
     setBodypage('none')
     setPackpage('')
     setPackcolor('[#a22a2b]')
     setMobileMenuOpen(false)
+    setCreditcolor('black')
   }
   function helproute() {
     if(helpage =="none") {
       setHelppage(" ")
       setBodypage('none')
+      setCreditpage('none')
       setPackpage('none')
       setPackcolor('black')
+      setCreditcolor('black')
     }
+  }
+  function creditroute() {
+    setCreditpage('')
+    setHelppage('none')
+    setBodypage('none')
+    setPackpage('none')
+    setPackcolor('black')
+    setCreditcolor('[#a22a2b]')
+    setMobileMenuOpen(false)
   }
   function bodyproute() {
     if(bodypage =="none") {
       setHelppage("none")
+      setCreditpage('none')
       setBodypage(' ')
       setPackpage('none')
       setPackcolor('black')
@@ -150,10 +167,10 @@ export default function Home() {
           </Link>
           </div>
           <Popover.Group className="hidden  lg:flex lg:gap-x-12 ">
-          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ">
-          Comptes
+          <a href="/" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ">
+          Accueil
           </a>
-          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
+          <a href="#credits" onClick={creditroute} className={`font-medium text-[15px] leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]`}>
             Crédits
           </a>
           <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
@@ -247,7 +264,7 @@ export default function Home() {
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
-                ><div className="flex gap-x-6 hover:text-white">
+                ><div className="flex gap-x-6 hover:text-white" onClick={creditroute}>
                    <CreditCardIcon className="h-7 w-7 text-[#616f8d] font-medium text-[15px] mt-0 hover:text-white" aria-hidden="true"/>
                    <p className="text-[#272828] font-medium text-[15px]"> Crédits</p>
                 </div>
@@ -353,6 +370,9 @@ export default function Home() {
       </div>
       <div style={{display:packpage}}>
         <Packages/>
+      </div>
+      <div style={{display:creditpage}}>
+        <Credit/>
       </div>
       <div>
         <Footers/>

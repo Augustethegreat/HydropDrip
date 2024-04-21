@@ -16,6 +16,13 @@ import deals from "./img/deals.jpg"
 import appsell from "./img/theappsell.png"
 import Footers from './footer'
 import Image from 'next/image'
+import cap1 from "./img/cap1.png"
+import cap2 from "./img/cap2.png"
+import cap3 from "./img/cap3.png"
+import cap4 from "./img/cap4.png"
+import cap5 from "./img/cap5.png"
+import cap6 from "./img/cap6.png"
+import img1 from "./img/acc1.jpg"
 
 const heads = [head1,head2, head3, head4];
 function TheBody() {
@@ -32,19 +39,19 @@ function TheBody() {
   return (
     <div className=' flex  min-w-screen bg-[#ffffff]'>
       <div className="flex justify-center mx-auto items-center">
-     <div className="max-w-screen-lg   lg:px-5 pb-[100px]">
+     <div className="lg:max-w-screen-lg md:w-full   lg:px-5 pb-[100px]">
       <p className='text-[#a22a2b] px-4 md:px-10 lg:px-0  font-medium text-[15px] leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
      <p className='text-[#272828]  mt-2 px-4 md:px-10 lg:px-0 font-medium text-[15px]  leading-tight lg:text-[28px] '>Découvrez le compte Diaspora, votre compte bancaire maintenu de l’étranger …</p>
 
      
-     <div className='w-full   hidden md:w-fulln md:mx-auto md:items-center  md:px-10 lg:px-0 lg:w-full h-[200px] md:flex lg:flex'>
+     <div className='w-full   hidden md:w-full     lg:px-0 lg:w-full h-[200px] md:flex lg:flex'>
      {heads.map((image, index) => (
         
           <img
           key={index}
           src={image.src}
           alt={`Slide ${index + 1}`}
-          className={` absolute  transition-opacity duration-1000 w-full lg:px-0  md:rounded-[10px] md:w-[780px] lg:w-[990px] md:h-auto lg:h-auto mt-10  lg:rounded-2xl ${
+          className={` absolute  transition-opacity duration-1000 w-full lg:px-0  md:rounded-[10px] md:w-full lg:w-[990px] md:h-auto lg:h-auto mt-10  lg:rounded-2xl ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           } ${index === currentImageIndex ? 'ease-in' : 'ease-out'}`}
         />
@@ -53,7 +60,7 @@ function TheBody() {
      </div>
       {/* {/* <img src={head1.src} className=' w-full hidden lg:flex md:flex md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl  '  alt=''  /> */}
       <div className='px-4'>
-      <img src={smallhead.src} className=' w-full  rounded-[25px] md:hidden lg:hidden  mt-10   '  alt=''  />
+      <img src={cap6.src} className=' w-full  rounded-[10px] md:hidden lg:hidden  mt-10   '  alt=''  />
       </div>
              
   <p className='text-[#a22a2b] px-3 font-medium text-xl lg:text-[28px] mt-7 pb-3 text-center'>        
@@ -109,10 +116,12 @@ function TheBody() {
               </div>
 
               {/* <img src={themobile.src} className=' w-full  md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl'  alt=''  /> */}
-              <img src={themobile.src} className=' hidden  md:hidden lg:flex lg:w-[1105px]  lg:h-auto mt-10 lg:rounded-2xl'  alt=''  />
+             <div className='md:px-10 lg:px-0 '>
+             <img src={cap3.src} className=' hidden md:flex  lg:flex lg:w-full  lg:h-auto mt-10 rounded-[15px] lg:rounded-2xl'  alt=''  />
           
+             </div>
           <div className='lg:w-auto md:w-auto w-full px-4'>
-          <img src={appsell.src} className=' w-full h-[400px] px-0 md:flex lg:hidden rounded-[30px] md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-10 lg:rounded-2xl'  alt=''  />
+          <img src={img1.src} className=' w-full h-[400px] px-0 flex md:hidden lg:hidden rounded-[30px] md:w-[600px] shadow-lg md:mx-auto md:items-center lg:w-0 mt-10 lg:rounded-2xl'  alt=''  />
         
           </div>
             <p className='text-[#a22a2b] px-4 text-xl md:text-2xl lg:text-2xl font-medium mt-10'>C’est quoi Equity BCDC Diaspora ?</p>

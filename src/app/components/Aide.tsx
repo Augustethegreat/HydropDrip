@@ -3,7 +3,13 @@ import themobile1 from "./img/thishead.png"
 import themobile from "./img/themobile.jpg"
 import themobile2 from "./img/head3.jpg"
 import smallhead from "./img/smallhead.png"
-import appsell from "./img/theappsell.png"
+import cap1 from "./img/cap1.png"
+import cap2 from "./img/cap2.png"
+import cap3 from "./img/cap3.png"
+import cap4 from "./img/cap4.png"
+import cap5 from "./img/cap5.png"
+import cap6 from "./img/cap6.png"
+import appsell from "./img/aide.jpg"
 import { Bars3Icon, XMarkIcon, EnvelopeIcon, QuestionMarkCircleIcon, UserCircleIcon, CreditCardIcon, BanknotesIcon, WalletIcon, RectangleGroupIcon } from "@heroicons/react/24/outline";
 import {ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { CheckIcon } from '@heroicons/react/20/solid'
@@ -136,9 +142,9 @@ function Aide() {
       
        
         </div>
-        <img src={themobile1.src} className=' hidden  md:hidden lg:flex lg:w-[1200px]  lg:h-[350px] mt-4 lg:rounded-xl'  alt=''  />
+        <img src={cap3.src} className=' hidden  md:hidden lg:flex lg:w-[1200px]  lg:h-[350px] mt-4 lg:rounded-xl'  alt=''  />
           <div className='px-4'>
-          <img src={appsell.src} className=' w-full h-[350px]  md:flex lg:hidden rounded-[20px]  md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-6 lg:rounded-2xl'  alt=''  />
+          <img src={appsell.src} className=' w-full h-[350px] shadow-xl md:flex lg:hidden rounded-[20px]  md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-6 lg:rounded-2xl'  alt=''  />
         
           </div>
         </div>
