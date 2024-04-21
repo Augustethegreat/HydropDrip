@@ -136,7 +136,7 @@ function Packages() {
          
          </div>
         </div>
-        <div className='lg:px-[345px] lg:w-full mt-10'>
+        <div className='lg:px-[245px] lg:w-full mt-10'>
         <img src={cap3.src} className=' hidden  md:hidden lg:flex  lg:w-full  lg:h-auto mt-4 lg:rounded-xl'  alt=''  />
         </div>
           <div className='px-4'>
