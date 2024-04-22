@@ -9,8 +9,27 @@ import appsell from "./img/offre2.jpg"
 function Packages() {
   return (
     <div className='pb-[100px] '>
-        <div className='border-b-[1px] border-b-[#e2e5e9] lg:max-w-screen-lg mx-auto md:w-full lg:w-auto items-center'>
-            <h1 className='text-[#a22a2b] font-bold text-center mt-10 mx-auto items-center pb-3 w-full lg:w-[700px] px-10 border-b-[3px] border-b-[#a22a2b]'> COMPTES BANCAIRES</h1>
+        <div className='border-b-[0px] border-b-[#e2e5e9] lg:max-w-screen-lg mx-auto md:w-full lg:w-auto items-center'>
+            <h1 className='text-[#a22a2b] font-bold text-center mt-5 mx-auto items-center pb-3 w-full lg:w-[700px] px-10 border-b-[3px] border-b-[#a22a2b]'> COMPTES BANCAIRES</h1>
+        </div>
+        <div className='scroll-smooth flex border-b-[1px] border-[#dee3e9] w-full mx-auto items-center text-[] text-[17px] font-medium'>
+            <div className='max-w-screen-lg flex mx-auto items-center  gap-x-5 scroll-smooth'>
+            <a href="#OptionsComptes">
+            <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
+                <h1 className=''>Options Comptes</h1>
+            </div>
+            </a>
+            <a href="#CartesBancaires">
+            <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
+                <h1 >Cartes Bancaires</h1>
+            </div>
+            </a>
+           <a href="#ProduitsDigitaux">
+           <div className={`h-full text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
+                <h1 >Produits Digitaux</h1>
+            </div>
+           </a>
+            </div>
         </div>
        <div className='mt-10'>
        <div className='mx-auto  items-center md:px-6 mt-10 lg:max-w-screen-xl'>

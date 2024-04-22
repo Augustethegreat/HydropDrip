@@ -12,7 +12,7 @@ import Header from "./components/Header";
 import Aide from "./components/Aide";
 import Packages from "./components/Packages";
 import Credit from "./components/Credit";
-
+import Depot from "./components/Depot";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,13 +26,29 @@ export default function Home() {
   const[packpage, setPackpage] = useState('none');
   const[packcolor, setPackcolor] = useState('black');
   const [creditcolor, setCreditcolor] = useState('black');
+  const [depotpage, setDepotpage] = useState('none');
+  const [depotcolor, setDepotcolor] = useState('black')
 
+  
   function packroute() {
     setCreditpage('none')
     setHelppage('none')
     setBodypage('none')
     setPackpage('')
     setPackcolor('[#a22a2b]')
+    setMobileMenuOpen(false)
+    setCreditcolor('black')
+    setDepotpage('none')
+    setDepotcolor('black')
+  }
+  function depotroute() {
+    setDepotpage('')
+    setDepotcolor('[#a22a2b]')
+    setCreditpage('none')
+    setHelppage('none')
+    setBodypage('none')
+    setPackpage('none')
+    setPackcolor('black')
     setMobileMenuOpen(false)
     setCreditcolor('black')
   }
@@ -44,6 +60,8 @@ export default function Home() {
       setPackpage('none')
       setPackcolor('black')
       setCreditcolor('black')
+      setDepotpage('none')
+      setDepotcolor('black')
     }
   }
   function creditroute() {
@@ -54,6 +72,8 @@ export default function Home() {
     setPackcolor('black')
     setCreditcolor('[#a22a2b]')
     setMobileMenuOpen(false)
+    setDepotpage('none')
+    setDepotcolor('black')
   }
   function bodyproute() {
     if(bodypage =="none") {
@@ -62,6 +82,8 @@ export default function Home() {
       setBodypage(' ')
       setPackpage('none')
       setPackcolor('black')
+      setDepotpage('none')
+      setDepotcolor('black')
     }
   }
   function changes() {
@@ -76,8 +98,11 @@ export default function Home() {
   }
   
   return (
-    <main className={`min-h-screen filter   items-center justify-between bg-[#fefefe] `}>
-        <header  className="bg-[#ffffff] h-15 border-b-2     ">
+    <main className={`min-h-screen filter   items-center justify-between bg-[#ffffff] ${loginOpen ? ' bg-[#eaeaea] opacity-8' : ''}`}>
+            {/* <div className=" fixed w-[100%] h-[100%] overflow-hidden opacity-10 ">
+
+</div> */}
+        <header  className=" h-15 border-b-2     ">
         <nav className="mx-auto hidden md:hidden lg:flex w-full text-[#f5f4f4] items-center justify-start p-1 lg:px-8 border-b-[1px] border-b-[#a22a2b]"
         aria-label="Global" >
             <div className="flex  gap-x-2  float-right ml-[50%] text-sm">
@@ -167,16 +192,16 @@ export default function Home() {
           </Link>
           </div>
           <Popover.Group className="hidden  lg:flex lg:gap-x-12 ">
-          <a href="/" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ">
+          <a href="/" className={`font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
           Accueil
           </a>
-          <a href="#credits" onClick={creditroute} className={`font-medium text-[15px] leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]`}>
+          <a href="#credits" onClick={creditroute} className={`font-medium text-[15px] leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
             Crédits
           </a>
-          <a href="#" className="font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]">
+          <a href="#depot" onClick={depotroute} className={`font-medium text-[15px] leading-6 text-${depotcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
             Dépôt a termes
           </a>
-          <a href="#offres" onClick={packroute} className={`font-medium text-[15px] leading-6 text-${packcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b]`}>
+          <a href="#offres" onClick={packroute} className={`font-medium text-[15px] leading-6 text-${packcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
              Nos offres
           </a>
           </Popover.Group>
@@ -184,7 +209,7 @@ export default function Home() {
 
 
         <div className="flex  mx-auto pr-0  float-right lg:ml-0 justify-end lg:flex lg:flex-1 gap-x-3  lg:gap-x-6">
-          <a href="#">
+          <a href="mailto:diaspora@equitybcdc.com">
           <EnvelopeIcon 
            className="h-6 w-6 justify-end text-[#a22a2b] "
            aria-hidden="true"
@@ -242,7 +267,7 @@ export default function Home() {
                 <div>
                 <UserCircleIcon className="h-10 w-10 text-[#14a8d7] mt-4 " aria-hidden="true"/>
                 </div>
-              <div className="py-2 ">
+              <div className="py-2 hover:cursor-pointer" onClick={() => setLoginOpen(true)}>
                 <p className="text-black font-medium text-[15px]">Bonjour !</p>
                 <a
                   href="#"
@@ -271,9 +296,9 @@ export default function Home() {
                
                 </a>
                 <a
-                  href="#"
+                  href="#depot"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
-                ><div className="flex gap-x-6 hover:text-white">
+                ><div className="flex gap-x-6 hover:text-white" onClick={depotroute}>
                    <BanknotesIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
                    <p className="text-[#272828] font-medium text-[15px]">Dépôt a termes</p>
                 </div>
@@ -374,9 +399,14 @@ export default function Home() {
       <div style={{display:creditpage}}>
         <Credit/>
       </div>
+      <div style={{display:depotpage}}>
+        <Depot/>
+      </div>
       <div>
         <Footers/>
       </div>
+    
+
     
     </main>
   );

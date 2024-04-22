@@ -37,7 +37,7 @@ function TheBody() {
   }, []);
 
   return (
-    <div className=' flex  min-w-screen bg-[#ffffff]'>
+    <div className=' flex  min-w-screen '>
       <div className="flex justify-center mx-auto items-center">
      <div className="lg:max-w-screen-lg md:w-full   lg:px-5 pb-[100px]">
       <p className='text-[#a22a2b] px-4 md:px-10 lg:px-0  font-medium text-[15px] leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
@@ -84,7 +84,9 @@ function TheBody() {
               </div>
               </span>
               <div className='flex items-center mx-auto justify-center mt-0 py-2 px-10 md:px-10 lg:px-0 md:py-0 lg:py-0'>
-              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  lg:w-[190px] h-[40px] text-[11px] font-bold text-white '>CREER VOTRE COMPTE</button>
+             <a href="https://www.equitybcdc-diasporabanking.com/equity-bank-ui/register">
+             <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full rounded-[5px] lg:w-[190px] h-[40px] text-[11px] font-bold text-white '>CREER VOTRE COMPTE</button>
+             </a>
                 </div>
               </div>
               <div className='border-[1px] items-center mx-auto py-4 w-full px-0  lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
@@ -107,7 +109,7 @@ function TheBody() {
                   <input type="text" name="" id="" placeholder='  Votre adresse électronique' className='border-[1px] w-full px-2  md:w-[155px] rounded-[4px] border-[#a22a2b] text-[#272828] h-[40px] text-[11px]'/>
                     </div>                
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-                  <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  h-[40px] md:w-[120px] md:h-[40px] text-[11px] font-bold text-white'>ENREGISTREZ-VOUS</button>
+                  <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  h-[40px] md:w-[120px] md:h-[40px] rounded-[5px] text-[11px] font-bold text-white'>ENREGISTREZ-VOUS</button>
       
                   </div>
               </div>

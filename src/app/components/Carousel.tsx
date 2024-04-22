@@ -51,20 +51,20 @@ const Slideshow = () => {
           <img src={pic4.src} alt="" className='h-auto w-full sm:w-[270px] md:w-[270px] lg:w-[330px] shadow-lg rounded-xl' /> */}
 
           {images.map((image, index) => (
-            <img key={index} src={image.src} alt={`Slide ${index}`} className="h-auto w-full shadow-xl md:w-[400px] lg:w-[650px]  lg:px-2 rounded-xl" />
+            <img key={index} src={image.src} alt={`Slide ${index}`} className="h-auto w-full shadow-xl md:w-[400px] lg:w-[650px]  lg:px-2 rounded-[10px]" />
           ))}
           
         </div>
           </div>
        <div className='max-w-screen-lg flex '>
        <button
-          className="absolute mt-[-45%] md:mt-[-130px]  bg-black bg-opacity-50 px-0 py-1 rounded-full"
+          className="absolute mt-[-35%] md:mt-[-130px]  bg-black bg-opacity-50 px-0 py-1 rounded-full"
           onClick={prevSlide}
         >
           <ChevronLeftIcon className="h-6 w-11 text-white " aria-hidden="true" />
         </button>
         <button
-          className="absolute mt-[-45%] md:mt-[-130px] ml-[89%]  md:ml-[89%] lg:ml-[942px] bg-black bg-opacity-50 px-0 py-1 rounded-full"
+          className="absolute mt-[-35%] md:mt-[-130px] ml-[89%]  md:ml-[89%] lg:ml-[942px] bg-black bg-opacity-50 px-0 py-1 rounded-full"
           onClick={nextSlide}
         >
           <ChevronRightIcon className="h-6 w-11 text-white " aria-hidden="true" />

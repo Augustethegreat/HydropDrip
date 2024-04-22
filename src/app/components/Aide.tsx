@@ -22,12 +22,12 @@ function Aide() {
             <div className='max-w-screen-lg flex mx-auto items-center  gap-x-5 scroll-smooth'>
             <a href="#sendus">
             <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
-                <h1 className=''>Send us your query</h1>
+                <h1 className=''>Vos questions</h1>
             </div>
             </a>
             <a href="#contact">
             <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
-                <h1 >Chat with us</h1>
+                <h1 >Contactez-nous</h1>
             </div>
             </a>
            <a href="#faq">
