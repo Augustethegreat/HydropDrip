@@ -292,13 +292,13 @@ export default function Home() {
               <div className="space-y-2 py-6 ">
                 <div className="flex gap-x-3">
                 <div>
-                <UserCircleIcon className="h-10 w-10 text-[#14a8d7] mt-4 " aria-hidden="true"/>
+                <UserCircleIcon className="h-10 w-10 text-[#a22a2b] mt-4 " aria-hidden="true"/>
                 </div>
               <div className="py-2 hover:cursor-pointer" onClick={() => setLoginOpen(true)}>
                 <p className="text-black font-medium text-[15px]">Bonjour !</p>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-0 text-base font-medium text-[15px] leading-7 text-[#14a8d7] "
+                  className="-mx-3 block rounded-lg px-3 py-0 text-base font-medium text-[15px] leading-7 text-[#a22a2b] "
                 >
                   Login / SignUp
                 </a>
@@ -441,7 +441,7 @@ export default function Home() {
       <div style={{display:aboutpage}}>
         <About/>
       </div>
-      <div>
+      <div className="mt-[30px]">
         <Footers/>
       </div>
     
