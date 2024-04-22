@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import themobile1 from "./img/cap6.png"
 import themobile from "./img/themobile.jpg"
 import cap3 from "./img/cap3.png"
@@ -7,31 +7,63 @@ import smallhead from "./img/smallhead.png"
 import appsell from "./img/offre2.jpg"
 
 function Packages() {
+  const[comptepage, setComptepage]= useState('')
+  const[cartepage, setCartepage]= useState('none')
+  const[produitpage, setProduitpage]= useState('none')
+  const[comptecolor, setComptecolor]= useState('[#a22a2b]')
+  const[cartecolor, setCartecolor]= useState('black')
+  const[produitcolor, setProduitcolor]= useState('black')
+  
+  function compteroute () {
+    setComptepage('')
+    setCartepage('none')
+    setProduitpage('none')
+    setComptecolor('[#a22a2b]')
+    setCartecolor('black')
+    setProduitcolor('black')
+  }
+  function carteroute () {
+    setComptepage('none')
+    setCartepage('')
+    setProduitpage('none')
+    setComptecolor('black')
+    setCartecolor('[#a22a2b]')
+    setProduitcolor('black')
+  }
+  function produitroute () {
+    setComptepage('none')
+    setCartepage('none')
+    setProduitpage('')
+    setComptecolor('black')
+    setCartecolor('black')
+    setProduitcolor('[#a22a2b]')
+  }
+
+
   return (
-    <div className='pb-[100px] '>
-        <div className='border-b-[0px] border-b-[#e2e5e9] lg:max-w-screen-lg mx-auto md:w-full lg:w-auto items-center'>
-            <h1 className='text-[#a22a2b] font-bold text-center mt-5 mx-auto items-center pb-3 w-full lg:w-[700px] px-10 border-b-[3px] border-b-[#a22a2b]'> COMPTES BANCAIRES</h1>
-        </div>
+    <div className='pb-[70px] '>
+      
         <div className='scroll-smooth flex border-b-[1px] border-[#dee3e9] w-full mx-auto items-center text-[] text-[17px] font-medium'>
             <div className='max-w-screen-lg flex mx-auto items-center  gap-x-5 scroll-smooth'>
             <a href="#OptionsComptes">
-            <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
+            <div onClick={compteroute} className={`h-full  text-${comptecolor} border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
                 <h1 className=''>Options Comptes</h1>
             </div>
             </a>
-            <a href="#CartesBancaires">
-            <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
+            <a href="#CartesBancaires" onClick={carteroute}>
+            <div className={`h-full  text-${cartecolor} border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
                 <h1 >Cartes Bancaires</h1>
             </div>
             </a>
-           <a href="#ProduitsDigitaux">
-           <div className={`h-full text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
+           <a href="#ProduitsDigitaux" onClick={produitroute}>
+           <div className={`h-full text-${produitcolor} border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
                 <h1 >Produits Digitaux</h1>
             </div>
            </a>
             </div>
         </div>
-       <div className='mt-10'>
+
+       <div className='mt-10' style={{display:comptepage}} >
        <div className='mx-auto  items-center md:px-6 mt-10 lg:max-w-screen-xl'>
          <div className='block  px-4 md:px-0 md:flex lg:block mx-auto items-center md:gap-x-5'>
          <div className='block lg:flex  lg:gap-x-4 space-y-5 lg:space-y-0'>
@@ -161,6 +193,16 @@ function Packages() {
           <div className='px-4'>
           <img src={appsell.src} className=' w-full h-[350px]  md:flex lg:hidden shadow-xl rounded-[20px]  md:w-[600px] md:mx-auto md:items-center lg:w-0 mt-6 lg:rounded-2xl'  alt=''  />
         
+          </div>
+       </div>
+       <div style={{display:cartepage}} className='text-center items-center justify-center mx-auto'>
+          <div className='mt-[130px] pb-[100px]'>
+          <p className='text-[40px] text-[#959595] font-bold '>#Carte Bancaire</p>
+          </div>
+       </div>
+       <div style={{display:produitpage}} className='text-center items-center justify-center mx-auto'>
+          <div className='mt-[130px] pb-[100px]'>
+          <p className='text-[40px] text-[#959595] font-bold '>#Produits digitaux</p>
           </div>
        </div>
     </div>
