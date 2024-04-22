@@ -83,11 +83,12 @@ function TheBody() {
              
               </div>
               </span>
+              <a href="https://www.equitybcdc-diasporabanking.com/equity-bank-ui/register">
+             
               <div className='flex items-center mx-auto justify-center mt-0 py-2 px-10 md:px-10 lg:px-0 md:py-0 lg:py-0'>
-             <a href="https://www.equitybcdc-diasporabanking.com/equity-bank-ui/register">
              <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full rounded-[5px] lg:w-[190px] h-[40px] text-[11px] font-bold text-white '>CREER VOTRE COMPTE</button>
-             </a>
-                </div>
+            
+                </div> </a>
               </div>
               <div className='border-[1px] items-center mx-auto py-4 w-full px-0  lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
               <span className='flex gap-x-2 px-3'>
