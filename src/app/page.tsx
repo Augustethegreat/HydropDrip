@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Footers from "./components/footer";
 import { Fragment, useState } from "react";
-import { Bars3Icon, XMarkIcon, EnvelopeIcon, QuestionMarkCircleIcon, UserCircleIcon, CreditCardIcon, BanknotesIcon, WalletIcon, RectangleGroupIcon } from "@heroicons/react/24/outline";
-import {ChatBubbleLeftIcon,ChevronDownIcon,ChevronUpIcon ,HomeIcon,PaperAirplaneIcon,PhoneIcon,PlayCircleIcon} from "@heroicons/react/20/solid";
+import { Bars3Icon, XMarkIcon, EnvelopeIcon, ChatBubbleBottomCenterTextIcon,QuestionMarkCircleIcon, UserCircleIcon, CreditCardIcon, BanknotesIcon, WalletIcon, RectangleGroupIcon } from "@heroicons/react/24/outline";
+import {ChatBubbleLeftIcon,ChevronDownIcon,ChevronUpIcon,HomeIcon,PaperAirplaneIcon,PhoneIcon,PlayCircleIcon} from "@heroicons/react/20/solid";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { SocialIcon } from 'react-social-icons'
 import { cn } from "./lib/utils";
@@ -13,6 +13,7 @@ import Aide from "./components/Aide";
 import Packages from "./components/Packages";
 import Credit from "./components/Credit";
 import Depot from "./components/Depot";
+import About from "./components/About";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,6 +29,8 @@ export default function Home() {
   const [creditcolor, setCreditcolor] = useState('black');
   const [depotpage, setDepotpage] = useState('none');
   const [depotcolor, setDepotcolor] = useState('black')
+  const [aboutpage, setAboutpage] = useState('none');
+  const [aboutcolor, setAboutcolor] = useState('black')
 
   
   function packroute() {
@@ -51,6 +54,21 @@ export default function Home() {
     setPackcolor('black')
     setMobileMenuOpen(false)
     setCreditcolor('black')
+    setAboutpage('none')
+    setAboutcolor('black')
+  }
+  function aboutroute() {
+    setAboutpage('')
+    setAboutcolor('[#a22a2b]')
+    setDepotpage('none')
+    setDepotcolor('black')
+    setCreditpage('none')
+    setHelppage('none')
+    setBodypage('none')
+    setPackpage('none')
+    setPackcolor('black')
+    setMobileMenuOpen(false)
+    setCreditcolor('black')
   }
   function helproute() {
     if(helpage =="none") {
@@ -61,6 +79,8 @@ export default function Home() {
       setPackcolor('black')
       setCreditcolor('black')
       setDepotpage('none')
+      setAboutpage('none')
+      setAboutcolor('black')
       setDepotcolor('black')
     }
   }
@@ -74,6 +94,8 @@ export default function Home() {
     setMobileMenuOpen(false)
     setDepotpage('none')
     setDepotcolor('black')
+    setAboutpage('none')
+    setAboutcolor('black')
   }
   function bodyproute() {
     if(bodypage =="none") {
@@ -84,6 +106,8 @@ export default function Home() {
       setPackcolor('black')
       setDepotpage('none')
       setDepotcolor('black')
+      setAboutpage('none')
+      setAboutcolor('black')
     }
   }
   function changes() {
@@ -191,7 +215,7 @@ export default function Home() {
             />
           </Link>
           </div>
-          <Popover.Group className="hidden  lg:flex lg:gap-x-12 ">
+          <Popover.Group className="hidden ml-[-40px] lg:flex lg:gap-x-9 ">
           <a href="/" className={`font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
           Accueil
           </a>
@@ -203,6 +227,9 @@ export default function Home() {
           </a>
           <a href="#offres" onClick={packroute} className={`font-medium text-[15px] leading-6 text-${packcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
              Nos offres
+          </a>
+          <a href="#about" onClick={aboutroute} className={`font-medium text-[15px] leading-6 text-${aboutcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
+             About diaspora
           </a>
           </Popover.Group>
         
@@ -313,7 +340,16 @@ export default function Home() {
                 </div>
                
                 </a>
-
+                <a
+                onClick={aboutroute}
+                 href="#about"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
+                ><div onClick={aboutroute} className="flex gap-x-6 hover:text-white"  >
+                   <ChatBubbleBottomCenterTextIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
+                   <p className="text-[#272828] font-medium text-[15px]"> About diaspora</p>
+                </div>
+               
+                </a>
       
               </div>
 
@@ -401,6 +437,9 @@ export default function Home() {
       </div>
       <div style={{display:depotpage}}>
         <Depot/>
+      </div>
+      <div style={{display:aboutpage}}>
+        <About/>
       </div>
       <div>
         <Footers/>
