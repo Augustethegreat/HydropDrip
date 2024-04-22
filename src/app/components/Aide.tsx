@@ -18,7 +18,7 @@ function Aide() {
  
   return (
     <div  className='scroll-smooth pb-[20px]'>
-        <div className='scroll-smooth flex border-b-[1px] border-[#dee3e9] w-full mx-auto items-center text-[] text-[17px] font-medium'>
+        <div className='scroll-smooth flex border-b-[1px] border-[#dee3e9] w-full mx-auto items-center text-[13px] md:text-[17px] font-medium'>
             <div className='max-w-screen-lg flex mx-auto items-center  gap-x-5 scroll-smooth'>
             <a href="#sendus">
             <div className={`h-full  text-black border-[#fff] hover:border-b-[#a22a2b] hover:text-[#a22a2b] border-[4px] py-4`}>
