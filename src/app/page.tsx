@@ -242,7 +242,7 @@ export default function Home() {
            aria-hidden="true"
           />
           </a>
-         <a className="hover:cursor-pointer">
+         <a className="hover:cursor-pointer" href="#aide">
          <span className="flex justify-end" onClick={helproute}>
                   <QuestionMarkCircleIcon className="h-6 w-6 text-[#a22a2b] "
            aria-hidden="true"/>

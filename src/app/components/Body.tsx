@@ -37,45 +37,50 @@ function TheBody() {
   }, []);
 
   return (
-    <div className=' flex  min-w-screen '>
+    <div className=' flex  min-w-screen ' >
       <div className="flex justify-center mx-auto items-center">
-     <div className="lg:max-w-screen-lg md:w-full   lg:px-5 pb-[100px]">
-      <p className='text-[#a22a2b] px-4 md:px-10 lg:px-0  font-medium text-[15px] leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
-     <p className='text-[#272828]  mt-2 px-4 md:px-10 lg:px-0 font-medium text-[15px]  leading-tight lg:text-[28px] '>Découvrez le compte Diaspora, votre compte bancaire maintenu de l’étranger …</p>
+     <div className="pb-[100px] md:w-full   lg:px-[10%]">
+      <div className=''>
+      <p className='text-[#a22a2b] px-4 md:px-10 lg:px-0 lg:max-w-screen-lg  font-medium text-[15px] md:text-[22px] leading-tight md:text-lg lg:text-[28px] mt-4'>Bonjour,</p> 
+     <p className='text-[#272828]  mt-2 px-4 md:px-10 lg:px-0  font-medium text-[15px] md:text-[22px] leading-tight lg:text-[28px] '>
+Découvrez le compte Diaspora, votre compte bancaire maintenu à l'étranger en toute sécurité …</p>
 
+      </div>
      
-     <div className='w-full   hidden md:w-full     lg:px-0 lg:w-full h-[200px] md:flex lg:flex'>
+     <div className='w-full   hidden md:w-full     lg:px-[0]    lg:w-full h-[200px] md:flex lg:flex'>
+     <div className=' rounded-[10px]'>
      {heads.map((image, index) => (
         
-          <img
-          key={index}
-          src={image.src}
-          alt={`Slide ${index + 1}`}
-          className={` absolute  transition-opacity duration-1000 w-full lg:px-0  md:rounded-[10px] md:w-full lg:w-[990px] md:h-auto lg:h-auto mt-10  lg:rounded-2xl ${
-            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-          } ${index === currentImageIndex ? 'ease-in' : 'ease-out'}`}
-        />
-       
-      ))}
+        <img
+        key={index}
+        src={image.src}
+        alt={`Slide ${index + 1}`}
+        className={` absolute  transition-opacity duration-1000 w-full lg:px-0 md:px-[5%]  md:rounded-[10px] md:w-full lg:w-[80%] md:h-auto lg:h-auto mt-4  lg:rounded-2xl ${
+          index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+        } ${index === currentImageIndex ? 'ease-in' : 'ease-out'}`}
+      />
+     
+    ))}
+     </div>
      </div>
       {/* {/* <img src={head1.src} className=' w-full hidden lg:flex md:flex md:w-[800px] lg:w-[1105px] md:h-auto lg:h-auto mt-10 lg:rounded-2xl  '  alt=''  /> */}
       <div className='px-4'>
       <img src={cap6.src} className=' w-full  rounded-[10px] md:hidden lg:hidden  mt-10   '  alt=''  />
       </div>
              
-  <p className='text-[#a22a2b] px-3 font-medium text-xl lg:text-[28px] mt-7 pb-3 text-center'>        
+  <p className='text-[#a22a2b] px-3 font-medium text-xl lg:text-[28px]  py-10 text-center'>        
                Restez au courant des dernières nouvelles et des produits Equity BCDC.
             </p>
-          <div>
+          <div className='px-4 md:px-10 lg:px-0'>
             <Slideshow/>
           </div>
-          <div className='block md:block md:px-8  lg:flex px-4 md:w-auto lg:px-0 md:gap-x-2 items-center mx-auto  mt-10 pb-3 '>
-              <div className='border-[1px]  items-center mx-auto py-4 w-full px-0 md:w-full lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
+          <div className='block md:block md:px-8  lg:flex px-4 md:w-full lg:px-0 md:gap-x-2 items-center mx-auto  mt-10 pb-3 ' >
+              <div className='border-[1px]  items-center mx-auto py-4 w-full px-0 md:w-full lg:w-full mt-3 md:mt-0  bg-[#ffffff]'>
               <span className='flex gap-x-2 px-3'>
-              <img src={acc.src} className='w-[80px]   lg:w-[170px] h-auto px-1 md:px-0 '  alt=''  />
+              <img src={acc.src} className='w-[80px]   lg:w-[25%] h-auto px-1 md:px-0 '  alt=''  />
               <div className=' text-[#272828] '>
                 <p className='font-semibold  text-sm'>Vous n'avez pas de compte ?</p>
-                <p className=' w-full  font-normal md:px-0 lg:px-0    lg:w-[300px]   text-[11px] md:text-[12px] lg:text-[12px]'>Créez un compte pour ouvrir et gérer votre compte
+                <p className=' w-full  font-normal md:px-0 lg:px-0    lg:w-[100%]   text-[11px] md:text-[15px] lg:text-[13px]'>Créez un compte pour ouvrir et gérer votre compte
                     bancaire, facilement et en toute sécurité. Commandez
                     votre carte, soumettez une demande de prêt et
                     commandez nos produits numériques disponible sur
@@ -90,12 +95,12 @@ function TheBody() {
             
                 </div> </a>
               </div>
-              <div className='border-[1px] items-center mx-auto py-4 w-full px-0  lg:w-[500px] mt-3 md:mt-0  bg-[#ffffff]'>
+              <div className='border-[1px] items-center mx-auto py-4 w-full px-0  lg:w-full mt-3 md:mt-3 lg:mt-0  bg-[#ffffff]'>
               <span className='flex gap-x-2 px-3'>
-              <img src={deals.src}  className='w-[80px]   lg:w-[170px] h-auto px-1 md:px-0 '   alt=''  />
+              <img src={deals.src}  className='w-[80px]   lg:w-[25%] h-auto px-1 md:px-0 '   alt=''  />
               <div className=' text-[#272828] '>
                 <p className='font-semibold  text-sm  '>Abonnez-vous à nos newsletters !</p>
-                <p className=' w-full md:px-0 lg:px-0  font-normal px-1   lg:w-[300px]   text-[11px] md:text-[12px] lg:text-[12px]'>Recevez des offres exclusives et des mises à jour sur
+                <p className=' w-full md:px-0 lg:px-0  font-normal px-1   lg:w-[100%]   text-[11px] md:text-[15px] lg:text-[13px]'>Recevez des offres exclusives et des mises à jour sur
                   nos produits DIASPORA. Soyez le premier informé de
                   nos offres spéciales de produits bancaires et de nos
                   concours.</p>
@@ -104,10 +109,10 @@ function TheBody() {
               </span>
               <div className=' md:flex lg:flex  justify-center mt-2 mt:mt-0 lg:mt-0 pd-3 gap-x-1 md:gap-x-1 lg:gap-x-3'>         
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-                  <input type="text" name="" id="" placeholder='  Votre Nom ' className='border-[1px] w-full px-2 md:w-[155px] rounded-[4px] border-[#a22a2b] text-[#272828] h-[40px] text-[11px]'/>
+                  <input type="text" name="" id="" placeholder='  Votre Nom ' className='border-[1px] w-full px-2 md:w-[300px] lg:w-[155px] rounded-[4px] border-[#a22a2b] text-[#272828] h-[40px] text-[11px]'/>
                   </div>
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
-                  <input type="text" name="" id="" placeholder='  Votre adresse électronique' className='border-[1px] w-full px-2  md:w-[155px] rounded-[4px] border-[#a22a2b] text-[#272828] h-[40px] text-[11px]'/>
+                  <input type="text" name="" id="" placeholder='  Votre adresse électronique' className='border-[1px] w-full px-2  md:w-[300px] lg:w-[155px] rounded-[4px] border-[#a22a2b] text-[#272828] h-[40px] text-[11px]'/>
                     </div>                
                   <div className='py-2 px-10 md:px-0 lg:px-0 md:py-0 lg:py-0'>
                   <button className='bg-[#a22a2b] hover:bg-[#d73611] w-full  h-[40px] md:w-[120px] md:h-[40px] rounded-[5px] text-[11px] font-bold text-white'>ENREGISTREZ-VOUS</button>

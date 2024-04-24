@@ -51,10 +51,21 @@ function Aide() {
                 <input type="text" placeholder='Courriel' className=' w-full px-7  md:w-[265px]  lg:w-[290px] pl-4 py-2 text-[#292929] border-[#a22a2b] border-[2px] rounded-[5px]'/>
                 <input type="text" placeholder='Numéro de contact' className='w-full px-7 mt-3 lg:mt-0 md:mt-0  md:w-[265px]  lg:w-[290px] pl-4 py-2 text-[#292929] border-[#a22a2b] hover:border-[#a22a2b] rounded-[5px] border-[2px] ' />
             </div>
-            <input type="text" placeholder='Requête/Compliment/Plainte' className=' w-full px-7 mt-2 md:w-[542px] lg:w-[542px] pl-4 py-2 text-[#292929] border-[#a22a2b] hover:border-[#a22a2b] rounded-[5px] border-[2px] '/>
+            <select id="dropdownTextbox" className=' w-full px-7 mt-2 md:w-[542px] lg:w-[542px] pl-4 py-2 text-[#292929] border-[#a22a2b] hover:border-[#a22a2b] rounded-[5px] border-[2px] '>
+            <option value="" selected disabled hidden>Requête/Compliment/Plainte</option>
+            <option value="Requête">Requête</option>
+            <option value="Compliment">Compliment</option>
+            <option value="Plainte">Plainte</option>
+            </select>
             <div>
-            <input type="text" placeholder='Ouverture de compte/Commande Carte/Réactivation de Compte/ Demande de prêt / Autres' className='w-full px-10 mt-2 md:w-[542px] lg:w-[542px] pl-4 py-2 text-[#292929] border-[#a22a2b] hover:border-[#a22a2b] rounded-[5px] border-[2px] '/>
-            
+            <select id="dropdownTextbox" className='w-full px-10 mt-2 md:w-[542px] lg:w-[542px] pl-4 py-2 text-[#292929] border-[#a22a2b] hover:border-[#a22a2b] rounded-[5px] border-[2px] '>
+                <option className='py-4 bg-[#a22a2b] text-black hover:bg-[#a22a2b] hover:text-white' value="" selected disabled hidden>Ouverture de compte/Commande Carte/Réactivation de Compte/ Demande de prêt / Autres</option>
+                <option className='mt-10 bg-white text-black hover:bg-[#a22a2b] hover:text-white' value="Ouverture de compte">Ouverture de compte</option>
+                <option value="Commande Carte">Commande Carte</option>
+                <option value="Réactivation de Compte">Réactivation de Compte</option>
+                <option value="Demande de prêt">Demande de prêt</option>
+                <option value="Autres">Autres</option>
+                </select>
             </div>
             <textarea name="" id="" placeholder='Commentaire'  className='w-full px-7 mt-3 lg:w-[542px] pl-4 py-2 h-[100px] text-[#292929] border-[#a22a2b] hover:border-[#a22a2b] rounded-[5px] border-[2px]'></textarea>
             <div className=' bg-[#a22a2b] hover:bg-[#d73611] hover:cursor-pointer w-full px-7 mt-3 lg:w-[542px] pl-4 py-2  text-[#292929] border-[#a22a2b] hover:border-[#a22a2b] rounded-[5px] border-[2px] shadow-lg shadow-[#7c7a7a]'>

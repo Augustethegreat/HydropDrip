@@ -13,38 +13,42 @@ function Credit() {
             <div className="w-full md:px-[60px] px-4 block md:flex gap-x-[50px]">
               <div className='space-y-4 md:space-y-8 md:w-[430px] w-full'>
               <div className=' block md:flex gap-x-[30px] w-full px-6 md:w-auto'>
-                    <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Prix D'achat</p>
+                    <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Montant sollicite</p>
                     <div className='flex gap-x-[1px] mt-2 md:mt-0'>
-                        <p>$</p>
+                        <p>USD</p>
                         <input type="number" placeholder='' className='border-[2px] border-[#a22a2b]  outline-[#a22a2b] w-[86%] md:w-auto py-2 mt-[-9px] text-end rounded-[5px] pr-2 '/>
-                        <p>pm</p>
+                        <p>P/Mois</p>
                     </div>
 
                 </div>
                 <div className=' block md:flex gap-x-[30px] w-full px-6 md:w-auto'>
-                    <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Contribution</p>
+                    <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Apport</p>
                     <div className='flex gap-x-[1px] mt-2 md:mt-0'>
-                        <p>$</p>
+                        <p>USD</p>
                         <input type="number" placeholder='' className='border-[2px] border-[#a22a2b] outline-[#a22a2b] w-[86%] md:w-auto py-2 mt-[-9px] text-end rounded-[5px] pr-2 '/>
-                        <p>pm</p>
+                        <p>P/Mois</p>
                     </div>
 
                 </div>
                 <div className=' block md:flex gap-x-[30px] w-full px-6 md:w-auto'>
-                    <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Taux d’intérêt</p>
+                    <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Amortissement</p>
                     <div className='flex gap-x-[1px] mt-2 md:mt-0'>
-                        <p className='text-white'>$</p>
+                        <p className='flex md:hidden text-white'>SD</p>
+                        <p className='text-white'>U</p>
                         <input type="number" placeholder='' value="15.7" className='border-[2px] border-[#a22a2b] outline-[#a22a2b] w-[86%] md:w-auto py-2 mt-[-9px] text-end rounded-[5px] pr-2 '/>
                         <p>%</p>
+                        <p className='text-white'>PMis</p>
                     </div>
 
                 </div>
                 <div className=' block md:flex gap-x-[30px] w-full px-6 md:w-auto'>
                     <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Durée de paiement</p>
                     <div className='flex gap-x-[1px] mt-2 md:mt-0'>
-                        <p className='text-white'>$</p>
+                        <p className='flex md:hidden text-white'>SD</p>
+                        <p className='text-white'>U</p>
                         <input type="number" placeholder='' className='border-[2px] border-[#a22a2b] outline-[#a22a2b] w-[86%] md:w-auto py-2 mt-[-9px] text-end rounded-[5px] pr-2 '/>
-                        <p>m</p>
+                        <p>Mois</p>
+                        <p className='text-white'>p/</p>
                     </div>
 
                 </div>
@@ -57,15 +61,15 @@ function Credit() {
                <div className='px-8 mt-4 space-y-2'>
                <div>
                     <p>Montant de prêt </p>
-                    <p className='text-[25px]'>$ 0</p>
+                    <p className='text-[25px]'>USD 0</p>
                 </div>
                 <div>
                     <p>Sommation d’intérêt   </p>
-                    <p className='text-[25px]'>$ 0</p>
+                    <p className='text-[25px]'>USD 0</p>
                 </div>
                 <div>
-                    <p>Remboursement Total </p>
-                    <p className='text-[25px]'>$ 0</p>
+                    <p>Mensualites </p>
+                    <p className='text-[25px]'>USD 0</p>
                 </div>
 
                </div>
