@@ -123,10 +123,10 @@ export default function Home() {
   
   return (
     <main className={`min-h-screen filter   items-center justify-between bg-[#ffffff] ${loginOpen ? ' bg-[#eaeaea] opacity-8' : ''}`}>
-            {/* <div className=" fixed w-[100%] h-[100%] overflow-hidden opacity-10 ">
+            {/* <div className=" fixed w-[100%] h-[100%] overflow-hidden opacity-10 "></div> */}
 
-</div> */}
-        <header  className=" h-15 border-b-2     ">
+
+  <header  className=" h-15 border-b-2     ">
         <nav className="mx-auto hidden md:hidden lg:flex w-full text-[#f5f4f4] items-center justify-start p-1 lg:px-8 border-b-[1px] border-b-[#a22a2b]"
         aria-label="Global" >
             <div className="flex  gap-x-2  float-right ml-[50%] text-sm">
@@ -229,7 +229,7 @@ export default function Home() {
              Nos offres
           </a>
           <a href="#about" onClick={aboutroute} className={`font-medium text-[15px] leading-6 text-${aboutcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
-             About diaspora
+          À propos de la diaspora
           </a>
           </Popover.Group>
         
@@ -423,6 +423,8 @@ export default function Home() {
         </Dialog.Panel>
       </Dialog>
     </header>
+
+
       <div style={{display:bodypage}}>
       <TheBody />
       </div>
