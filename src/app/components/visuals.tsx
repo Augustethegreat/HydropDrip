@@ -99,8 +99,8 @@ export default function Visuals() {
       }
 
   return (
-    <div className='pb-[450px] overflow-hidden flex' >
-      <div className='text-[#414141] text-[16px] font-semibold bg-[#fafafa] shadow-xl py-[110px] pb-[550px] w-[400px] space-y-7'>
+    <div className='pb-[0px] overflow-hidden flex' >
+      <div className='text-[#414141] text-[16px] font-semibold bg-[#fafafa] shadow-xl  py-[110px] pb-[550px] w-[400px] space-y-7'>
         <div className='px-[40px]'>
           <p className={`border-l-4 border-l-${color1} pl-5 text-${color1}`}>01. Votre projet</p>
         </div>
@@ -118,7 +118,7 @@ export default function Visuals() {
         </div>
       </div>
 
-      <div className='bg-[#fffdfd] w-full shadow-xl'>
+      <div className='bg-[#fffdfd] w-full  shadow-xl'>
         <div className='mt-[40px]   pl-[28%]' style={{display:page1}}>
           <div>
           <p className='  text-[50px] text-black font-bold'>Votre project immobilier</p>
