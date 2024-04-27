@@ -64,10 +64,10 @@ export default function Depot() {
                     <p>Retenue à la source LU</p>
                   </div>
                   <div className='font-semibold text-[#707070] text-[19px] md:text-[23px]  space-y-[14px]'>
-                    <p>25.000,00 £</p>
+                    <p>25.000,00 $</p>
                     <p>4,42 %</p>
-                    <p>1.105,00 £</p>
-                    <p>-221,00 £</p>
+                    <p>1.105,00 $</p>
+                    <p>-221,00 $</p>
                   </div>
                 </div>
                 <div className='border-b-[3px] border-b-[#b8b8b8] w-full px-2 py-3'>
@@ -75,7 +75,7 @@ export default function Depot() {
                 </div>
                 <div className='flex text-[15px] md:text-[20px] gap-x-[38%] md:gap-x-[250px] pt-3'>
                     <p>Capital final</p>
-                    <p className=' font-semibold text-[#707070] text-[19px] md:text-[23px] '>25.884,00 £</p>
+                    <p className=' font-semibold text-[#707070] text-[19px] md:text-[23px] '>25.884,00 $</p>
                 </div>
               </div>
               </div>
