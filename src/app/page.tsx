@@ -14,6 +14,7 @@ import Packages from "./components/Packages";
 import Credit from "./components/Credit";
 import Depot from "./components/Depot";
 import About from "./components/About";
+import {motion} from "framer-motion"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -437,9 +438,12 @@ export default function Home() {
       <div style={{display:creditpage}}>
         <Credit/>
       </div>
-      <div style={{display:depotpage}}>
+      <motion.div initial={{y: +200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
+        transition={{duration:1.2}}
+        viewport={{once:false}} style={{display:depotpage}}>
         <Depot/>
-      </div>
+        </motion.div>
       <div style={{display:aboutpage}}>
         <About/>
       </div>

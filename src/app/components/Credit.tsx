@@ -39,7 +39,7 @@ function Credit() {
     <div >
         <div className='pb-8 ' style={{display:creditCal}}>
          <div className='border-b-[0px] border-b-[#e2e5e9] lg:max-w-screen-lg mx-auto md:w-full lg:w-auto items-center'>
-            <h1 className='text-[#a22a2b] font-bold text-center mt-5 mx-auto items-center pb-3 w-full lg:w-[700px] px-10 border-b-[3px] border-b-[#a22a2b]'>Simulateur de Remboursement de Crédit Immo</h1>
+            <h1 className='text-[#a22a2b] font-bold text-center mt-5 mx-auto text-[17px] lg:text-[25px] items-center pb-3 w-full lg:w-[700px] px-10 border-b-[3px] border-b-[#a22a2b]'>Simulateur de Remboursement de Crédit Immo</h1>
         </div>
        
         <div className='flex mt-[60px] text-black text-[14px] font-medium  lg:max-w-screen-lg mx-auto items-center'>

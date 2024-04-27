@@ -45,7 +45,7 @@ const Slideshow = () => {
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex === images.length - 140 ? 0 : prevIndex + 1));
-      }, 13000); // Change slide every 5 seconds
+      }, 8000); // Change slide every 5 seconds
   
       return () => clearInterval(interval);
     }, [images.length]);
