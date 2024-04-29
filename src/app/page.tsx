@@ -122,7 +122,7 @@ export default function Home() {
     }
   }
   function visualroute() {
-    if(bodypage =="none") {
+    setMobileMenuOpen(false)
       setHelppage("none")
       setCreditpage('none')
       setBodypage('none')
@@ -133,7 +133,7 @@ export default function Home() {
       setDepotcolor('black')
       setAboutpage('none')
       setAboutcolor('black')
-    }
+    
   }
   function changes() {
       if(changeIcon =="none") {
@@ -389,6 +389,16 @@ export default function Home() {
                 </div>
                
                 </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
+                >
+                  <div className="flex gap-x-6 hover:text-white" onClick={creditroute}>
+                   <CreditCardIcon className="h-7 w-7 text-[#616f8d] font-medium text-[15px] mt-0 hover:text-white" aria-hidden="true"/>
+                   <p className="text-[#272828] font-medium text-[15px]"> Crédits</p>
+                </div>
+               
+                </a>
                 <Popover.Group className="flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button onClick={change} className="flex gap-x-6 hover:text-white">
@@ -417,7 +427,7 @@ export default function Home() {
             >
               <Popover.Panel className="absolute ml-10 bg-white  top-full z-10 mt-3 w-[160px]  overflow-hidden hover:cursor-pointer  shadow-lg text-[#646464] ">
                 <div className=" gap-y-3">
-                <div onClick={creditroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                <div onClick={visualroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
                   <a href="#crédit" >
                         Crédit
                       </a>
@@ -433,16 +443,7 @@ export default function Home() {
             </Transition>
           </Popover>
           </Popover.Group>
-                {/* <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
-                >
-                  <div className="flex gap-x-6 hover:text-white" onClick={creditroute}>
-                   <CreditCardIcon className="h-7 w-7 text-[#616f8d] font-medium text-[15px] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-medium text-[15px]"> Crédits</p>
-                </div>
-               
-                </a>
+                {/* 
                 <a
                   href="#depot"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
