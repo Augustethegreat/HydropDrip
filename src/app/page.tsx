@@ -14,6 +14,7 @@ import Packages from "./components/Packages";
 import Credit from "./components/Credit";
 import Depot from "./components/Depot";
 import About from "./components/About";
+import Visuals from "./components/visuals";
 import {motion} from "framer-motion"
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
   const[packcolor, setPackcolor] = useState('black');
   const [creditcolor, setCreditcolor] = useState('black');
   const [depotpage, setDepotpage] = useState('none');
+  const [visualpage, setVisualpage] = useState('none');
   const [depotcolor, setDepotcolor] = useState('black')
   const [aboutpage, setAboutpage] = useState('none');
   const [aboutcolor, setAboutcolor] = useState('black')
@@ -45,6 +47,7 @@ export default function Home() {
     setMobileMenuOpen(false)
     setCreditcolor('black')
     setDepotpage('none')
+    setVisualpage('none')
     setDepotcolor('black')
   }
   function depotroute() {
@@ -53,6 +56,7 @@ export default function Home() {
     setCreditpage('none')
     setHelppage('none')
     setBodypage('none')
+    setVisualpage('none')
     setPackpage('none')
     setPackcolor('black')
     setMobileMenuOpen(false)
@@ -69,6 +73,7 @@ export default function Home() {
     setHelppage('none')
     setBodypage('none')
     setPackpage('none')
+    setVisualpage('none')
     setPackcolor('black')
     setMobileMenuOpen(false)
     setCreditcolor('black')
@@ -82,6 +87,7 @@ export default function Home() {
       setPackcolor('black')
       setCreditcolor('black')
       setDepotpage('none')
+      setVisualpage('none')
       setAboutpage('none')
       setAboutcolor('black')
       setDepotcolor('black')
@@ -91,6 +97,7 @@ export default function Home() {
     setCreditpage('')
     setHelppage('none')
     setBodypage('none')
+    setVisualpage('none')
     setPackpage('none')
     setPackcolor('black')
     setCreditcolor('[#a22a2b]')
@@ -108,6 +115,21 @@ export default function Home() {
       setPackpage('none')
       setPackcolor('black')
       setDepotpage('none')
+      setVisualpage('none')
+      setDepotcolor('black')
+      setAboutpage('none')
+      setAboutcolor('black')
+    }
+  }
+  function visualroute() {
+    if(bodypage =="none") {
+      setHelppage("none")
+      setCreditpage('none')
+      setBodypage('none')
+      setPackpage('none')
+      setPackcolor('black')
+      setDepotpage('none')
+      setVisualpage('')
       setDepotcolor('black')
       setAboutpage('none')
       setAboutcolor('black')
@@ -231,10 +253,13 @@ export default function Home() {
           <Popover.Group className="hidden ml-[-40px] lg:flex lg:gap-x-9 ">
           <a href="/" className={`font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
           Accueil
+          </a>          
+          <a href="#credits" onClick={creditroute} className={`font-medium text-[15px] leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
+           Crédits
           </a>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button onClick={change} className={`font-medium text-[15px] flex outline-none leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
+            <Popover.Button onClick={change} className={`font-medium text-[15px] flex outline-none leading-6 text-black border-b-[2px] border-b-white  ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
             Simulateurs
               <ChevronDownIcon
               style={{display:changeIcon3}}
@@ -259,14 +284,14 @@ export default function Home() {
             >
               <Popover.Panel className="absolute bg-white  top-full z-10 mt-3 w-[160px]  overflow-hidden hover:cursor-pointer  shadow-lg text-[#646464] ">
                 <div className=" gap-y-3">
-                      <div onClick={creditroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                      <div onClick={visualroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
                       <a href="#credits"  >
                         Crédits
                       </a>
                       </div>
                   <div onClick={depotroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
                   <a href="#depot" >
-                        Dépôt a termes
+                        DAT
                       </a>
                   </div>
                 </div>
@@ -280,7 +305,7 @@ export default function Home() {
              Nos offres
           </a>
           <a href="#about" onClick={aboutroute} className={`font-medium text-[15px] leading-6 text-${aboutcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
-          À propos de la diaspora
+          À propos
           </a>
           </Popover.Group>
         
@@ -297,7 +322,7 @@ export default function Home() {
          <span className="flex justify-end" onClick={helproute}>
                   <QuestionMarkCircleIcon className="h-6 w-6 text-[#a22a2b] "
            aria-hidden="true"/>
-                  <p className="text-[#a22a2b] font-medium text-[15px] hidden lg:flex">Aide</p>
+                  <p className="text-[#a22a2b] font-medium text-[15px] hidden lg:flex">Beson d'Aide</p>
          </span>
          </a>
          <a href="#">
@@ -399,7 +424,7 @@ export default function Home() {
                 </div>
                   <div onClick={depotroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
                   <a href="#depot" >
-                        Dépôt a termes
+                        DAT
                       </a>
                   </div>
                 </div>
@@ -442,7 +467,7 @@ export default function Home() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 ><div onClick={aboutroute} className="flex gap-x-6 hover:text-white"  >
                    <ChatBubbleBottomCenterTextIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
-                   <p className="text-[#272828] font-medium text-[15px]"> About diaspora</p>
+                   <p className="text-[#272828] font-medium text-[15px]"> À propos</p>
                 </div>
                
                 </a>
@@ -541,6 +566,12 @@ export default function Home() {
         transition={{duration:1.2}}
         viewport={{once:false}} style={{display:depotpage}}>
         <Depot/>
+        </motion.div>
+        <motion.div initial={{y: +200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
+        transition={{duration:1.2}}
+        viewport={{once:false}} style={{display:visualpage}}>
+        <Visuals/>
         </motion.div>
       <div style={{display:aboutpage}}>
         <About/>
