@@ -14,7 +14,7 @@ import Packages from "./components/Packages";
 import Credit from "./components/Credit";
 import Depot from "./components/Depot";
 import About from "./components/About";
-import Visuals from "./components/visuals";
+import Creditpage from "./components/Creditpage";
 import {motion} from "framer-motion"
 
 export default function Home() {
@@ -254,7 +254,7 @@ export default function Home() {
           <a href="/" className={`font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
           Accueil
           </a>          
-          <a href="#credits" onClick={creditroute} className={`font-medium text-[15px] leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
+          <a href="#credits" onClick={visualroute} className={`font-medium text-[15px] leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
            Crédits
           </a>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -284,7 +284,7 @@ export default function Home() {
             >
               <Popover.Panel className="absolute bg-white  top-full z-10 mt-3 w-[160px]  overflow-hidden hover:cursor-pointer  shadow-lg text-[#646464] ">
                 <div className=" gap-y-3">
-                      <div onClick={visualroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                      <div onClick={creditroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
                       <a href="#credits"  >
                         Crédits
                       </a>
@@ -393,7 +393,7 @@ export default function Home() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
                 >
-                  <div className="flex gap-x-6 hover:text-white" onClick={creditroute}>
+                  <div className="flex gap-x-6 hover:text-white" onClick={visualroute}>
                    <CreditCardIcon className="h-7 w-7 text-[#616f8d] font-medium text-[15px] mt-0 hover:text-white" aria-hidden="true"/>
                    <p className="text-[#272828] font-medium text-[15px]"> Crédits</p>
                 </div>
@@ -427,7 +427,7 @@ export default function Home() {
             >
               <Popover.Panel className="absolute ml-10 bg-white  top-full z-10 mt-3 w-[160px]  overflow-hidden hover:cursor-pointer  shadow-lg text-[#646464] ">
                 <div className=" gap-y-3">
-                <div onClick={visualroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                <div onClick={creditroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
                   <a href="#crédit" >
                         Crédit
                       </a>
@@ -572,7 +572,7 @@ export default function Home() {
         whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
         viewport={{once:false}} style={{display:visualpage}}>
-        <Visuals/>
+        <Creditpage/>
         </motion.div>
       <div style={{display:aboutpage}}>
         <About/>
