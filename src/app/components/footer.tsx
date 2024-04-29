@@ -22,7 +22,7 @@ function Footers() {
       }
     }
   return (
-    <div className='  text-white bg-[#a22a2b]  h-auto w-full md:w-full  lg:w-full '>
+    <div className='  text-white bg-[#a22a2b] mt-1 h-auto w-full md:w-full  lg:w-full '>
                         <div className='flex p-5 gap-x-[50%] md:hidden lg:hidden '>
                             <div>
                             <img 

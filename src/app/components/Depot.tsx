@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import cap3 from "./img/cap3.png"
 import img1 from "./img/acc3.jpg"
 export default function Depot() {
+  const[montplace, setMontplace]= useState(0);
+  const [devise, setDevise]=useState('USD');
+  const[times, setTimes] = useState('');
+  const[period, setPeriod] = useState('');
+
+
   return (
     <div  className='pb-[100px]'>
          <div className='border-b-[0px] border-b-[#e2e5e9] lg:max-w-screen-lg mx-auto md:w-full lg:w-auto items-center'>
@@ -59,22 +65,20 @@ export default function Depot() {
                 <div className='flex gap-x-[70px] md:gap-x-[150px] '>
                   <div className='  space-y-5'>
                     <p>Montant versé</p>
-                    <p>Taux d'intérêts</p>
-                    <p>Montant brut d'intérêts</p>
-                    <p>Retenue à la source LU</p>
+                    <p>Taux d'intérêt annuel</p>
+                    <p>Versement de l'intérêt</p>
                   </div>
                   <div className='font-semibold text-[#707070] text-[19px] md:text-[23px]  space-y-[14px]'>
                     <p>25.000,00 $</p>
                     <p>4,42 %</p>
-                    <p>1.105,00 $</p>
                     <p>-221,00 $</p>
                   </div>
                 </div>
                 <div className='border-b-[3px] border-b-[#b8b8b8] w-full px-2 py-3'>
 
                 </div>
-                <div className='flex text-[15px] md:text-[20px] gap-x-[38%] md:gap-x-[250px] pt-3'>
-                    <p>Capital final</p>
+                <div className='flex text-[15px] md:text-[20px] gap-x-[38%] md:gap-x-[238px] pt-3'>
+                    <p>Capital Accru</p>
                     <p className=' font-semibold text-[#707070] text-[19px] md:text-[23px] '>25.884,00 $</p>
                 </div>
               </div>

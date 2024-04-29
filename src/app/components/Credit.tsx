@@ -43,7 +43,7 @@ function Credit() {
         </div>
        
         <div className='flex mt-[60px] text-black text-[14px] font-medium  lg:max-w-screen-lg mx-auto items-center'>
-            <div className="w-full md:px-[60px] px-4 block md:flex gap-x-[50px]">
+            <div className="w-full md:px-[60px] shadow-xl pb-8 rounded-[10px] px-4 block md:flex gap-x-[50px]">
               <div className='space-y-4 md:space-y-8 md:w-[430px] w-full'>
               <div className=' block md:flex gap-x-[30px] w-full px-6 md:w-auto'>
                     <p className='ml-4 md:ml-0 w-auto md:w-[150px]'>Montant sollicité</p>
@@ -112,8 +112,8 @@ function Credit() {
                 </div>
               </div>
               <div className=' md:w-[430px] w-fullm mt-10 md:mt-0'>
-                <p className='text-center text-[20px] font-medium'>Paiement Mensuel</p>
-               <div className='px-8 mt-4 space-y-2'>
+              <p className='text-center text-[25px] text-[#707070] font-semibold'>EVOLUTION DU CREDIT</p>
+               <div className='px-8 mt-[8px] space-y-2'>
                <div>
                     <p>Montant de prêt </p>
                     <p className='text-[25px]'>USD {montsol}</p>
@@ -138,8 +138,8 @@ function Credit() {
              
 
         </div>
-        <div className='flex mt-9 text-black text-lg  lg:max-w-screen-lg mx-auto items-center'>
-        <p className='text-black text-[14px]  px-4 lg:px-[70px] '>* Le taux d'intérêt est fixé par défaut au taux préférentiel. Les institutions bancaires peuvent choisir de prêter aux particuliers à un taux supérieur ou inférieur à ce taux préférentiel.</p>
+        <div className='text-[#707070] px-4 md:px-[224px] mt-10 text-[18px] font-semibold'>
+        <p className=' '>* Le taux d'intérêt est fixé par défaut au taux préférentiel. Les institutions bancaires peuvent choisir de prêter aux particuliers à un taux supérieur ou inférieur à ce taux préférentiel.</p>
          
             </div>  
            <div className='max-w-screen-lg mx-auto items-center justify-center'>

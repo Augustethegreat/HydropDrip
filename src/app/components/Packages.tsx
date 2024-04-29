@@ -41,7 +41,7 @@ function Packages() {
 
 
   return (
-    <div className='pb-[70px] '>
+    <div className='pb-[90px] '>
       
         <div className='scroll-smooth flex border-b-[1px] border-[#dee3e9] w-full mx-auto items-center text-[13px] md:text-[17px] font-medium'>
             <div className='max-w-screen-lg flex mx-auto items-center  gap-x-5 scroll-smooth'>
@@ -76,7 +76,7 @@ function Packages() {
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
             style={{borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px'}}>
                 <div className='flex px-7 py-5 text-[19px] gap-x-[45%]'>
-                <p>Découvrez +</p>
+                <p>Souscrire +</p>
                 <a href='https://www.equitybcdc-diasporabanking.com/equity-bank-ui/auth/login?returnUrl=%2Fhome'>
                 <p className=''>Ouvrez</p>
                 </a>
@@ -92,7 +92,7 @@ function Packages() {
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
             style={{borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px'}}>
                 <div className='flex px-7 py-5 text-[19px] gap-x-[45%]'>
-                <p>Découvrez +</p>
+                <p>Souscrire +</p>
                 <a href='https://www.equitybcdc-diasporabanking.com/equity-bank-ui/auth/login?returnUrl=%2Fhome'>
                 <p className=''>Ouvrez</p>
                 </a>
@@ -108,7 +108,7 @@ function Packages() {
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
             style={{borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px'}}>
                 <div className='flex px-7 py-5 text-[19px] gap-x-[45%]'>
-                <p>Découvrez +</p>
+                <p>Souscrire +</p>
                 <a href='https://www.equitybcdc-diasporabanking.com/equity-bank-ui/auth/login?returnUrl=%2Fhome'>
                 <p className=''>Ouvrez</p>
                 </a>
@@ -126,7 +126,7 @@ function Packages() {
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
             style={{borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px'}}>
                 <div className='flex px-7 py-5 text-[19px] gap-x-[45%]'>
-                <p>Découvrez +</p>
+                <p>Souscrire +</p>
                 <a href='https://www.equitybcdc-diasporabanking.com/equity-bank-ui/auth/login?returnUrl=%2Fhome'>
                 <p className=''>Ouvrez</p>
                 </a>
@@ -142,7 +142,7 @@ function Packages() {
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
             style={{borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px'}}>
                 <div className='flex px-7 py-5 text-[19px] gap-x-[45%]'>
-                <p>Découvrez +</p>
+                <p>Souscrire +</p>
                 <a href='https://www.equitybcdc-diasporabanking.com/equity-bank-ui/auth/login?returnUrl=%2Fhome'>
                 <p className=''>Ouvrez</p>
                 </a>
@@ -158,7 +158,7 @@ function Packages() {
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
             style={{borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px'}}>
                 <div className='flex px-7 py-5 text-[19px] gap-x-[45%]'>
-                <p>Découvrez +</p>
+                <p>Souscrire +</p>
                 <a href='https://www.equitybcdc-diasporabanking.com/equity-bank-ui/auth/login?returnUrl=%2Fhome'>
                 <p className=''>Ouvrez</p>
                 </a>
@@ -177,7 +177,7 @@ function Packages() {
             <div className='text-[#fff] font-bold w-full border-t-[1px] border-b-[1px] border-b-[#a22a2b] border-t-[#ebebeb] bg-[#a22a2b] ' 
             style={{borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px'}}>
                 <div className='flex px-7 py-5 text-[19px] gap-x-[45%]'>
-                <p>Découvrez +</p>
+                <p>Souscrire +</p>
                 <a href='https://www.equitybcdc-diasporabanking.com/equity-bank-ui/auth/login?returnUrl=%2Fhome'>
                 <p className=''>Ouvrez</p>
                 </a>

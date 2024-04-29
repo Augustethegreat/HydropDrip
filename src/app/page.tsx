@@ -21,6 +21,8 @@ export default function Home() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [changeIcon, setChangeIcon] = useState("none")
   const [changeIcon1, setChangeIcon1] = useState("block")
+  const [changeIcon2, setChangeIcon2] = useState("none")
+  const [changeIcon3, setChangeIcon3] = useState("block")
 
   const [creditpage, setCreditpage]= useState('none');
   const [helpage, setHelppage]= useState('none');
@@ -121,6 +123,16 @@ export default function Home() {
         setChangeIcon1("block")
       }
   }
+  function change() {
+    if(changeIcon2 =="none") {
+      setChangeIcon2("block")
+      setChangeIcon3("none")
+    }
+    else{
+      setChangeIcon2("none")
+      setChangeIcon3("block")
+    }
+}
   
   return (
     <main className={`min-h-screen filter   items-center justify-between bg-[#ffffff] ${loginOpen ? ' bg-[#eaeaea] opacity-8' : ''}`}>
@@ -134,7 +146,7 @@ export default function Home() {
              <div className="py-2 px-2 hover:bg-[#f3f3f3]">
              <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button onClick={changes} className="flex items-center gap-x-4 text-[15px] font-bold   text-[#a22a2b] border-none hover:border-none">
+            <Popover.Button onClick={changes} className="flex outline-none items-center gap-x-4 text-[15px] font-bold   text-[#a22a2b] border-none hover:border-none">
               RDC
               <ChevronDownIcon
               style={{display:changeIcon1}}
@@ -220,12 +232,50 @@ export default function Home() {
           <a href="/" className={`font-medium text-[15px] leading-6 text-black border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
           Accueil
           </a>
-          <a href="#credits" onClick={creditroute} className={`font-medium text-[15px] leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
-            Crédits
-          </a>
-          <a href="#depot" onClick={depotroute} className={`font-medium text-[15px] leading-6 text-${depotcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
-            Dépôt a termes
-          </a>
+          <Popover.Group className="hidden lg:flex lg:gap-x-12">
+          <Popover className="relative">
+            <Popover.Button onClick={change} className={`font-medium text-[15px] flex outline-none leading-6 text-${creditcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
+            Simulateurs
+              <ChevronDownIcon
+              style={{display:changeIcon3}}
+                className='h-7 w-7  flex-none  text-[15px] font-bold'
+                aria-hidden="true"
+              />
+              <ChevronUpIcon
+              style={{display:changeIcon2}}
+                className="h-7 w-7 font-bold flex-none "
+                aria-hidden="true"
+              />
+            </Popover.Button>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-700"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute bg-white  top-full z-10 mt-3 w-[160px]  overflow-hidden hover:cursor-pointer  shadow-lg text-[#646464] ">
+                <div className=" gap-y-3">
+                      <div onClick={creditroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                      <a href="#credits"  >
+                        Crédits
+                      </a>
+                      </div>
+                  <div onClick={depotroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                  <a href="#depot" >
+                        Dépôt a termes
+                      </a>
+                  </div>
+                </div>
+
+              </Popover.Panel>
+            </Transition>
+          </Popover>
+          </Popover.Group>
+     
           <a href="#offres" onClick={packroute} className={`font-medium text-[15px] leading-6 text-${packcolor} border-b-[2px] border-b-white hover:text-[#a22a2b] hover:border-b-[#a22a2b] ${loginOpen ? ' border-b-[#eaeaea] ' : ''}`}>
              Nos offres
           </a>
@@ -314,10 +364,55 @@ export default function Home() {
                 </div>
                
                 </a>
-                <a
+                <Popover.Group className="flex lg:gap-x-12">
+          <Popover className="relative">
+            <Popover.Button onClick={change} className="flex gap-x-6 hover:text-white">
+            <BanknotesIcon className="h-7 w-7 text-[#616f8d] mt-0 hover:text-white" aria-hidden="true"/>
+            <p className="text-[#272828] font-medium text-[15px]">Simulateurs</p>
+              <ChevronDownIcon
+              style={{display:changeIcon3}}
+                className='h-7 w-7  flex-none text-[#272828] text-[15px] font-bold'
+                aria-hidden="true"
+              />
+              <ChevronUpIcon
+              style={{display:changeIcon2}}
+                className="h-7 w-7 font-bold flex-none  text-[#272828]"
+                aria-hidden="true"
+              />
+            </Popover.Button>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-700"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute ml-10 bg-white  top-full z-10 mt-3 w-[160px]  overflow-hidden hover:cursor-pointer  shadow-lg text-[#646464] ">
+                <div className=" gap-y-3">
+                <div onClick={creditroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                  <a href="#crédit" >
+                        Crédit
+                      </a>
+                </div>
+                  <div onClick={depotroute} className="w-full pl-2 py-3 mt-1 text-black hover:text-white hover:bg-[#a22a2b] bg-white">
+                  <a href="#depot" >
+                        Dépôt a termes
+                      </a>
+                  </div>
+                </div>
+
+              </Popover.Panel>
+            </Transition>
+          </Popover>
+          </Popover.Group>
+                {/* <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
-                ><div className="flex gap-x-6 hover:text-white" onClick={creditroute}>
+                >
+                  <div className="flex gap-x-6 hover:text-white" onClick={creditroute}>
                    <CreditCardIcon className="h-7 w-7 text-[#616f8d] font-medium text-[15px] mt-0 hover:text-white" aria-hidden="true"/>
                    <p className="text-[#272828] font-medium text-[15px]"> Crédits</p>
                 </div>
@@ -331,7 +426,7 @@ export default function Home() {
                    <p className="text-[#272828] font-medium text-[15px]">Dépôt a termes</p>
                 </div>
                
-                </a>
+                </a> */}
                 <a
                  href="#offres"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-black hover:bg-[#f2f2f2] hover:text-white"
@@ -435,9 +530,12 @@ export default function Home() {
       <div style={{display:packpage}}>
         <Packages/>
       </div>
-      <div style={{display:creditpage}}>
+      <motion.div initial={{y: +200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
+        transition={{duration:1.2}}
+        viewport={{once:false}}  style={{display:creditpage}}>
         <Credit/>
-      </div>
+        </motion.div>
       <motion.div initial={{y: +200, opacity:0}}
         whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
