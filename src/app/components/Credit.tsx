@@ -11,9 +11,9 @@ function Credit() {
     const[apport, setApport] = useState(0);
     const[taux, setTaux] = useState(15.7)
     const[duree, setDuree] = useState(0)
-    const [mens, setMens] = useState('')
-    const [amort, setAmort] = useState('');
-    const [amorts, setAmorts] = useState('');
+    const [mens, setMens] = useState('$0')
+    const [amort, setAmort] = useState('$0');
+    const [amorts, setAmorts] = useState('$0');
 
     function calculate() {
   
