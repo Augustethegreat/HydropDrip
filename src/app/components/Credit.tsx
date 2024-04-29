@@ -20,9 +20,17 @@ function Credit() {
 
         const result = Math.round((montsol*(1 + taux/100)/duree)*10)/10;
         const amortis = Math.round(((result/100)*taux)*duree*10)/10;
-
-        setAmort(amortis)
-        setMens(result);
+        let nums =0;
+        let num2 =0;
+        let num3 =0;
+        var monthlyInterestRate = (taux/100) / 12;
+        var denominator = 1 - Math.pow(1 + monthlyInterestRate, -duree);
+        var monthlyPayment = (montsol * monthlyInterestRate) / denominator;
+        nums = montsol+monthlyPayment*duree; 
+        num2 = Math.round(monthlyPayment *10)/10;
+        num3 = Math.round(nums*10)/10;
+        setAmort(num2)
+        setMens(num3);
 
     }
 
@@ -119,11 +127,11 @@ function Credit() {
                     <p className='text-[25px]'>USD {montsol}</p>
                 </div>
                 <div>
-                    <p>Amortissement d'intérêt</p>
+                    <p>Montant d'échéance</p>
                     <p className='text-[25px]'>USD {amort}</p>
                 </div>
                 <div>
-                    <p>Mensualités </p>
+                    <p>Montant total du prêt</p>
                     <p className='text-[25px]'>USD {mens}</p>
                 </div>
 

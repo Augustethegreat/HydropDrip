@@ -94,6 +94,7 @@ export default function Depot() {
                     const inputval1 = event.target.value;
                     const num1 = parseFloat(inputval1)
                     setMontplace(num1);
+                    caclulate();
                  } }placeholder='25000' className='outline-none w-[150px] md:w-auto border-b-[1px] border-b-[#cdcdcd] text-[#707070] font-medium'/>
                   <div className='flex gap-x-2'>
                     <p>Dévise</p>
