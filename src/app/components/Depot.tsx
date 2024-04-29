@@ -3,10 +3,80 @@ import cap3 from "./img/cap3.png"
 import img1 from "./img/acc3.jpg"
 export default function Depot() {
   const[montplace, setMontplace]= useState(0);
+  const[finalmont, setFinalMont]= useState(0);
   const [devise, setDevise]=useState('USD');
-  const[times, setTimes] = useState('');
+  const[times, setTimes] = useState('1 mois');
   const[period, setPeriod] = useState('');
+  const[interest, setInterets] = useState(0);
 
+  
+
+  function caclulate() {
+  let intnum = 0;
+  let intnums=0;
+  let final =0;
+  if (period == "Annuellement") {
+    
+    intnum = (montplace * 0.05);
+    intnums = Math.round(intnum *10)/10;
+    setInterets(intnums);
+    setFinalMont(intnums + montplace);
+    
+  }
+    else if   (period== "Mensuellement") {
+        
+      intnum = (montplace * 0.05)/12;
+      intnums = Math.round(intnum *10)/10;
+      setInterets(intnums);
+      setFinalMont(intnums + montplace);
+    }
+   else if (period == "A l'echeance") {
+      if(times == '3 mois') {
+        
+        intnum = (montplace * 0.05)/(12/3);
+        intnums = Math.round(intnum *10)/10;
+        setInterets(intnums);
+        setFinalMont(intnums + montplace);
+      }
+      else if(times == '6 mois') {
+        
+        intnum = (montplace * 0.05)/(12/6);
+        intnums = Math.round(intnum *10)/10;
+        setInterets(intnums);
+        setFinalMont(intnums + montplace);
+      }
+      else if(times == '9 mois') {
+        
+        intnum = (montplace * 0.05)/(12/9);
+        intnums = Math.round(intnum *10)/10;
+        setInterets(intnums);
+        setFinalMont(intnums + montplace);
+      }
+      else if(times == '12 mois') {
+        
+        intnum = (montplace * 0.05);
+        intnums = Math.round(intnum *10)/10;
+        setInterets(intnums);
+        setFinalMont(intnums + montplace);
+      }
+      else if(times == '2 ans') {
+        
+        intnum = (montplace * 0.05)/(12/24);
+        intnums = Math.round(intnum *10)/10;
+        setInterets(intnums);
+        setFinalMont(intnums + montplace);
+      }
+      else if(times == '1 mois') {
+        
+        intnum = (montplace * 0.05)/(12);
+        intnums = Math.round(intnum *10)/10;
+        setInterets(intnums);
+        setFinalMont(intnums + montplace);
+        
+      }
+    
+   }
+  }
 
   return (
     <div  className='pb-[100px]'>
@@ -19,10 +89,20 @@ export default function Depot() {
                 <div className=''>
                   <p>Montant à placer </p>
                   <div className='flex gap-x-[40px] md:gap-x-[165px]'>                  
-                  <input type="number" placeholder='25000' className='outline-none w-[150px] md:w-auto border-b-[1px] border-b-[#cdcdcd] text-[#707070] font-medium'/>
+                  <input type="number" value={montplace}
+                   onChange={(event) => {
+                    const inputval1 = event.target.value;
+                    const num1 = parseFloat(inputval1)
+                    setMontplace(num1);
+                 } }placeholder='25000' className='outline-none w-[150px] md:w-auto border-b-[1px] border-b-[#cdcdcd] text-[#707070] font-medium'/>
                   <div className='flex gap-x-2'>
                     <p>Dévise</p>
-                  <select id="dropdownTextbox"  className='w-full px-1 mt-0 md:w-[80px] outline-none pl-0 pb-1 text-[#707070] font-semibold border-[#cdcdcd] hover:border-[#000]  border-b-[1px] '>      
+                  <select id="dropdownTextbox" 
+                   onChange={(event) => {
+                    const inputval1 = event.target.value;
+                    const num1 = inputval1
+                    setDevise(num1);
+                 } } className='w-full px-1 mt-0 md:w-[80px] outline-none pl-0 pb-1 text-[#707070] font-semibold border-[#cdcdcd] hover:border-[#000]  border-b-[1px] '>      
                   <option  value="USD">USD</option>
                   <option  value="CFC">CFC</option>
                   <option  value="EUR">EUR</option>
@@ -33,13 +113,18 @@ export default function Depot() {
                 </div>
                 <div className='block md:flex gap-x-[86px]'>
                   <p>Combien de temps souhaitez-vous épargner?</p>
-                  <select id="dropdownTextbox"  className='w-[95%] px-1 mt-0 md:w-[80px] outline-none pl-0 pb-1 text-[#707070] font-semibold border-[#cdcdcd] hover:border-[#000]  border-b-[1px] '>      
-                  <option  value="1 mois">1 mois</option>
-                  <option  value="3 mois">3 mois</option>
-                  <option  value="6 mois">6 mois</option>
-                  <option  value="9 mois">9 mois</option>
-                  <option  value="12 mois">12 mois</option>
-                  <option  value="2 ans">2 ans</option> 
+                  <select id="dropdownTextbox"  
+                   onChange={(event) => {
+                    const inputval1 = event.target.value;
+                    const num1 = inputval1
+                    setTimes(num1);
+                 } } onClick={caclulate}  className='w-[95%] px-1 mt-0 md:w-[80px] outline-none pl-0 pb-1 text-[#707070] font-semibold border-[#cdcdcd] hover:border-[#000]  border-b-[1px] '>      
+                  <option onClick={caclulate}  value="1 mois">1 mois</option>
+                  <option onClick={caclulate}  value="3 mois">3 mois</option>
+                  <option onClick={caclulate}  value="6 mois">6 mois</option>
+                  <option onClick={caclulate}  value="9 mois">9 mois</option>
+                  <option onClick={caclulate}  value="12 mois">12 mois</option>
+                  <option onClick={caclulate}  value="2 ans">2 ans</option> 
                  
                   </select>
                 </div>
@@ -49,16 +134,22 @@ export default function Depot() {
                 </div>
                 <div className='block md:flex gap-x-10'>
                   <p>Quand voulez- vous recevoir votre intérêt?</p>
-                  <select id="dropdownTextbox"  className='w-[95%] px-0 mt-0 md:w-[150px] outline-none pl-0 pb-1 text-[#707070] font-semibold border-[#cdcdcd] hover:border-[#000]  border-b-[1px] '>      
-                  <option  value="Mensuellement">Mensuellement</option>
-                  <option  value="Annuellement">Annuellement</option>
-                  <option  value="A l'echeance">A l'echeance</option>              
+                  <select id="dropdownTextbox" 
+                   onChange={(event) => {
+                    const inputval1 = event.target.value;
+                    const num1 = inputval1
+                    setPeriod(num1);
+                 } }  onClick={caclulate} className='w-[95%] px-0 mt-0 md:w-[150px] outline-none pl-0 pb-1 text-[#707070] font-semibold border-[#cdcdcd] hover:border-[#000]  border-b-[1px] '>      
+                  <option onClick={caclulate} value="Mensuellement">Mensuellement</option>
+                  <option onClick={caclulate} value="Annuellement">Annuellement</option>
+                  <option onClick={caclulate} value="A l'echeance">A l'echeance</option>              
                   </select>
+
                 </div>
               </div>
 
 
-              <div className='shadow-xl rounded-[20px] mt-5 lg:mt-[-65px]'>
+              <div className='shadow-xl rounded-[20px] mt-5 lg:mt-[-65px] w-auto md:w-[520px]'>
               <p className='text-center text-[25px] text-[#707070] font-semibold'>EVOLUTION DU DÉPÔT</p>
               <div className='text-black text-[15px] md:text-[20px] p-5'>
                 
@@ -69,9 +160,9 @@ export default function Depot() {
                     <p>Versement de l'intérêt</p>
                   </div>
                   <div className='font-semibold text-[#707070] text-[19px] md:text-[23px]  space-y-[14px]'>
-                    <p>25.000,00 $</p>
-                    <p>4,42 %</p>
-                    <p>-221,00 $</p>
+                    <p>{montplace} $</p>
+                    <p>5 %</p>
+                    <p>{interest} $</p>
                   </div>
                 </div>
                 <div className='border-b-[3px] border-b-[#b8b8b8] w-full px-2 py-3'>
@@ -79,7 +170,7 @@ export default function Depot() {
                 </div>
                 <div className='flex text-[15px] md:text-[20px] gap-x-[38%] md:gap-x-[238px] pt-3'>
                     <p>Capital Accru</p>
-                    <p className=' font-semibold text-[#707070] text-[19px] md:text-[23px] '>25.884,00 $</p>
+                    <p className=' font-semibold text-[#707070] text-[19px] md:text-[23px] '>{finalmont} $</p>
                 </div>
               </div>
               </div>

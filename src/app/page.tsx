@@ -568,12 +568,9 @@ export default function Home() {
         viewport={{once:false}} style={{display:depotpage}}>
         <Depot/>
         </motion.div>
-        <motion.div initial={{y: +200, opacity:0}}
-        whileInView={{y:0, opacity:1}}
-        transition={{duration:1.2}}
-        viewport={{once:false}} style={{display:visualpage}}>
+        <div style={{display:visualpage}}>
         <Creditpage/>
-        </motion.div>
+        </div>
       <div style={{display:aboutpage}}>
         <About/>
       </div>
