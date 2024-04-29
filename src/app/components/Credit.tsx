@@ -11,8 +11,9 @@ function Credit() {
     const[apport, setApport] = useState(0);
     const[taux, setTaux] = useState(15.7)
     const[duree, setDuree] = useState(0)
-    const [mens, setMens] = useState(0)
-    const [amort, setAmort] = useState(0);
+    const [mens, setMens] = useState('')
+    const [amort, setAmort] = useState('');
+    const [amorts, setAmorts] = useState('');
 
     function calculate() {
   
@@ -29,8 +30,22 @@ function Credit() {
         nums = montsol+monthlyPayment*duree; 
         num2 = Math.round(monthlyPayment *10)/10;
         num3 = Math.round(nums*10)/10;
-        setAmort(num2)
-        setMens(num3);
+        var formattedAmount = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(monthlyPayment);
+        var formattedAmounts = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(nums);
+        var formattedAmoun = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(montsol);
+        setAmorts(formattedAmoun)
+        console.log(formattedAmount)
+        setAmort(formattedAmount)
+       setMens(formattedAmounts);
 
     }
 
@@ -124,15 +139,15 @@ function Credit() {
                <div className='px-8 mt-[8px] space-y-2'>
                <div>
                     <p>Montant de prêt </p>
-                    <p className='text-[25px]'>USD {montsol}</p>
+                    <p className='text-[25px]'>{amorts}  </p>
                 </div>
                 <div>
                     <p>Montant d'échéance</p>
-                    <p className='text-[25px]'>USD {amort}</p>
+                    <p className='text-[25px]'>{amort} </p>
                 </div>
                 <div>
                     <p>Montant total du prêt</p>
-                    <p className='text-[25px]'>USD {mens}</p>
+                    <p className='text-[25px]'>{mens}  </p>
                 </div>
 
                </div>
