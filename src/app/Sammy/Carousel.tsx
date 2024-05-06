@@ -1,14 +1,15 @@
 import { useState,useEffect } from 'react';
-import head1 from "./img/head1.jpg"
-import head2 from "./img/head2.jpg"
-import head3 from "./img/head3.jpg"
-import pic1 from "./img/pic1.png"
-import pic2 from "./img/pic2.png"
-import pic3 from "./img/pic3.png"
-import pic4 from "./img/pic4.jpg"
+import head1 from "../components/img/head1.jpg"
+import head2 from "../components/img/head2.jpg"
+import head3 from "../components/img/head3.jpg"
+import pic1 from "../components/img/pic1.png"
+import pic2 from "../components/img/pic2.png"
+import pic3 from "../components/img/pic3.png"
+import pic4 from "../components/img/pic4.jpg"
+
 import {ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/outline';
-import pic5 from "./img/pic5.jpg"
-import pic6 from "./img/pic6.jpg"
+import pic5 from "../components/img/pic5.jpg"
+import pic6 from "../components/img/pic6.jpg"
 import Image from 'next/image';
 
 
@@ -73,7 +74,7 @@ const Slideshow = () => {
           {images.map((image, index) => (
             <img key={index} src={image.src} alt={`Slide ${index}`} className="h-auto mr-0 lg:mr-[4px] w-full shadow-xl md:w-[400px] lg:w-[301px] lg:h-[220px] lg:px-2 rounded-[10px]" />
           ))}
-          
+        
         </div>
           </div>
        <div className='md:max-w-screen-lg flex space-x-[80%] md:space-x-[85%] lg:space-x-[77%]'>

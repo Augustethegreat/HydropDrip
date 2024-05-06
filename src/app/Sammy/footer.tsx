@@ -22,7 +22,7 @@ function Footers() {
       }
     }
   return (
-    <div className='  text-white bg-[#a22a2b] mt-1 h-auto w-full md:w-full  lg:w-full '>
+    <div className='  text-white bg-[#003044] mt-1 h-auto w-full md:w-full  lg:w-full '>
                         <div className='flex p-5 gap-x-[50%] md:hidden lg:hidden '>
                             <div>
                             <img 
@@ -49,41 +49,40 @@ function Footers() {
                     <div className='flex gap-x-9 lg:gap-x-0 md:block lg:flex lg:pb-10'>
                     <div className='px-0 md:px-6 gap-y-5 h-[200px] w-[180px] md:w-auto'>
                         <p className='mt-2 lg:pb-3 text-[12px] lg:text-[15px] '>CONTACT</p>
-                        <p className='text-[12px] lg:text-[15px]'>Téléphones : +243 81 830 27 00 / </p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>+243 99 601 80 00</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Email: mail@equitybcdc.cd</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Service d’Assistance Clientèle en ligne</p>
+                        <p className='text-[12px] lg:text-[15px]'>Phone : +277 81 770 27 00 / </p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>+277 99 811 80 00</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Email: mail@hydrodrip.com</p>
+                        
                     </div >
                     <div className="px-0 md:px-6 gap-y-5 h-[200px] md:mt-5 lg:mt-0 w-[180px] md:w-auto">
                         <p className='mt-2  lg:pb-3 text-[12px] lg:text-[15px] '>SERVICES</p>
-                        <p className='text-[12px] lg:text-[15px]'>Ouvrir un compte</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Payer / Envoyer de l'argent</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Epargner / Investir</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Remboursement</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>EquityBCDC Online</p>
+                        <p className='text-[12px] lg:text-[15px]'>Open an account</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Pay / Send money</p>                     
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Refund</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Online services</p>
                     </div>
                     </div>
                    <div className='flex gap-x-9 lg:gap-x-0 md:block lg:flex lg:pb-10'>
                    <div className="px-0 md:px-6 gap-y-5 h-[200px] w-[180px] md:w-auto">
-                        <p className='mt-2 lg:pb-3  text-[12px] lg:text-[15px] '>ACTUALITÉS</p>
-                        <p className='text-[12px] lg:text-[15px]'>Communique de presse</p>
+                        <p className='mt-2 lg:pb-3  text-[12px] lg:text-[15px] '>Top News</p>
+                        <p className='text-[12px] lg:text-[15px]'>Latest Updates</p>
                        
                     </div>
                     <div className="px-0 md:px-6 gap-y-5 h-[200px] md:mt-5 lg:mt-0 w-[180px] md:w-auto">
-                        <p className='mt-2  lg:pb-3 text-[12px] lg:text-[15px] '>QUI SOMMES-NOUS?</p>
-                        <p className='text-[12px] lg:text-[15px]'>A propos de EquityBCDC</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Nos partenaires</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Relations avec les investisseurs</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Carrieres</p>
+                        <p className='mt-2  lg:pb-3 text-[12px] lg:text-[15px] '>Who are we?</p>
+                        <p className='text-[12px] lg:text-[15px]'>About Hydro</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Our partners</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Relations with Investors</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Carriers</p>
                     </div>
                    </div>
 
                     <div id='footerss' className='flex gap-x-9 lg:gap-x-0 md:block lg:flex lg:pb-10'>
                     <div className="px-0 md:px-6 gap-y-5 h-[200px] w-[180px] md:w-auto">
-                        <p className='mt-2  lg:pb-3 text-[12px] lg:text-[15px] '>HORAIRE DES AGENCES</p>
-                        <p className='text-[12px] lg:text-[15px]'>Du lundi au vendredi: 8h30-16h00</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Samedi: 8h00-12h00</p>
-                        <p className='mt-2 text-[12px] lg:text-[15px]'>Dimanche/jours fériés: fermé</p>
+                        <p className='mt-2  lg:pb-3 text-[12px] lg:text-[15px] '>Work Hours</p>
+                        <p className='text-[12px] lg:text-[15px]'>From Monday to Friday: 8am-4pm</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Saturday: 8am-4pm</p>
+                        <p className='mt-2 text-[12px] lg:text-[15px]'>Sunday/Public Holiday</p>
                     </div>
                     <div className="px-0 md:px-6 gap-y-5 h-[200px] md:mt-5 lg:mt-0 w-[180px] md:w-auto">
                     <div className="flex py lg:pb-3 -1 gap-x-0">
@@ -96,16 +95,16 @@ function Footers() {
                     </div>
                  
                     </div>
-                    <div className='w-full bg-[#221f1f]'>
+                    <div className='w-full bg-[#20e2c4]'>
                             <div className='py-7 text-[13px] gap-x-[80px]  lg:flex px-8 text-white hover:text-[rgb(244, 171, 122)]'>
                                <div className='flex gap-x-[30%] md:gap-x-[80px]'>
                                <p>Privacy Policy</p>
                                 <p>Terms and Conditions</p>
                                </div>
                                 <div className='md:flex gap-x-[80px]'>
-                                <p className='mt-2 md:mt-0'>Equity BCDC est régie par la Banque Centrale du Congo</p>
-                                <p className='mt-1 md:mt-0'>Langue:Francais, Switch to English</p>
-                                <p className='mt-1 md:mt-0'>© Equity BCDC 2024</p>
+                                <p className='mt-2 md:mt-0'>Project HydroDrip</p>
+                                <p className='mt-1 md:mt-0'>Languages: English</p>
+                                <p className='mt-1 md:mt-0'>© Chris Sabiti 2024</p>
                                 </div>
                             </div>
                     </div>
