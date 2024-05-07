@@ -7,8 +7,8 @@ function Slides() {
   return (
     <div className='  '>
         <p className='text-center font-extrabold text-[50px] pt-[70px] text-[#414141]'>Products</p>
-        <div className='flex mx-0 items-center justify-center pt-[80px] gap-x-10 px-[33%]'>
-        <div className='text-black bg-white pb-3 shadow-xl shadow-[#a2a2a2] rounded-[10px] '>
+        <div className='flex mx-0 items-center justify-center pt-[80px] gap-x-10 px-5 md:px-[33%]'>
+        <div className='hidden md:block text-black bg-white pb-3 shadow-xl shadow-[#a2a2a2] rounded-[10px] '>
             <img src={slidepic3.src} className='w-[350px] h-[340px]  rounded-t-[10px]' alt="" />
             <p className='py-7 text-center text-[20px] w-[330px] px-[5px] font-medium'>Successfull IFAT Show In Munich Early June 2022</p>
         </div>
@@ -16,7 +16,7 @@ function Slides() {
             <img src={slidepic.src} className='w-[350px] h-[340px]  rounded-t-[10px]' alt="" />
             <p className='py-7 text-center text-[20px] w-[330px] px-[5px] font-medium'>PYDRO is finalist of the Future Water Hack !</p>
         </div>
-        <div className='text-black bg-white pb-3 shadow-xl shadow-[#a2a2a2] rounded-[10px] '>
+        <div className='hidden md:block text-black bg-white pb-3 shadow-xl shadow-[#a2a2a2] rounded-[10px] '>
             <img src={slidepic2.src} className='w-[350px] h-[340px]  rounded-t-[10px]' alt="" />
             <p className='py-7 text-center text-[20px] w-[330px] px-[5px] font-medium'>Our CEO Was Named An "MIT Innovator Under 35"</p>
         </div>

@@ -55,10 +55,10 @@ function Body() {
             <div 
         className='space-y-7' >
                 <motion.div 
-        initial={{x: -200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
+        viewport={{once:true}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
                 <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] '>
                <FaGasPump className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white  '/>
                </div>
@@ -68,10 +68,10 @@ function Body() {
                   </div>
                 </motion.div>
                 <motion.div 
-        initial={{x: -200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer '>
+        viewport={{once:true}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer '>
                <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] shadow-xl'>
                <MdBatteryCharging60 className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white'/>
                </div>
@@ -81,10 +81,10 @@ function Body() {
                   </div>
                 </motion.div>
                 <motion.div 
-        initial={{x: -200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
+        viewport={{once:true}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
                <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] '>
                <FaCloudDownloadAlt className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white  '/>
                </div>
@@ -94,10 +94,10 @@ function Body() {
                   </div>
                 </motion.div>
                 <motion.div 
-        initial={{x: -200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
+        viewport={{once:true}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
                <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] '>
                <RiDashboard3Line className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white  '/>
                </div>
@@ -110,10 +110,10 @@ function Body() {
               <div 
          className='space-y-7'> 
                 <motion.div 
-        initial={{x: 200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
+        viewport={{once:true}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
                <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] '>
                <TbDeviceLandlinePhone className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white  '/>
                </div>
@@ -123,10 +123,10 @@ function Body() {
                   </div>
                 </motion.div>
                 <motion.div 
-        initial={{x: 200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
+        viewport={{once:true}} className='flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
                <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] '>
                <TbWindElectricity className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white  '/>
                </div>
@@ -136,10 +136,10 @@ function Body() {
                   </div>
                 </motion.div>
                 <motion.div 
-        initial={{x: 200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
+        viewport={{once:true}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
                <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] '>
                <RiDashboard3Line className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white  '/>
                </div>
@@ -149,10 +149,10 @@ function Body() {
                   </div>
                 </motion.div>
                 <motion.div 
-        initial={{x: 200, opacity:0}}
-        whileInView={{x:0, opacity:1}}
+        initial={{y: 200, opacity:0}}
+        whileInView={{y:0, opacity:1}}
         transition={{duration:1.2}}
-        viewport={{once:false}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
+        viewport={{once:true}} className='hidden md:flex gap-x-2 bg-white p-3  rounded-[15px] shadow-xl text-[#5a5a5a] hover:text-white hover:bg-[#3e889e] hover:cursor-pointer'>
                <div className='py-5 w-[50px] h-[50px] md:w-[80px] px-5 md:h-[80px] mt-5  bg-[#4cb5e5] rounded-[50px] '>
                <RiDashboard3Line className='md:w-[40px] w-[30px] h-[30px]  md:h-[40px] mt-[-10px] ml-[-7px] md:ml-0 md:mt-0  text-white  '/>
                </div>
